@@ -1,0 +1,12 @@
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\bin\Debug\net5.0\QueueManagement.Common.deps.json
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\bin\Debug\net5.0\QueueManagement.Common.dll
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\bin\Debug\net5.0\ref\QueueManagement.Common.dll
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\bin\Debug\net5.0\QueueManagement.Common.pdb
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\obj\Debug\net5.0\QueueManagement.Common.csproj.AssemblyReference.cache
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\obj\Debug\net5.0\QueueManagement.Common.GeneratedMSBuildEditorConfig.editorconfig
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\obj\Debug\net5.0\QueueManagement.Common.AssemblyInfoInputs.cache
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\obj\Debug\net5.0\QueueManagement.Common.AssemblyInfo.cs
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\obj\Debug\net5.0\QueueManagement.Common.csproj.CoreCompileInputs.cache
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\obj\Debug\net5.0\QueueManagement.Common.dll
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\obj\Debug\net5.0\ref\QueueManagement.Common.dll
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\obj\Debug\net5.0\QueueManagement.Common.pdb

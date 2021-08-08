@@ -1,0 +1,221 @@
+{
+  "format": 1,
+  "restore": {
+    "E:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.BLL\\QueueManagement.BLL.csproj": {}
+  },
+  "projects": {
+    "E:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.BLL\\QueueManagement.BLL.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.BLL\\QueueManagement.BLL.csproj",
+        "projectName": "QueueManagement.BLL",
+        "projectPath": "E:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.BLL\\QueueManagement.BLL.csproj",
+        "packagesPath": "C:\\Users\\m_ghasemi\\.nuget\\packages\\",
+        "outputPath": "E:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.BLL\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\m_ghasemi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.Gateway.MQ\\QueueManagement.Gateway.MQ.csproj": {
+                "projectPath": "E:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.Gateway.MQ\\QueueManagement.Gateway.MQ.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.Common\\QueueManagement.Common.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.Common\\QueueManagement.Common.csproj",
+        "projectName": "QueueManagement.Common",
+        "projectPath": "E:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.Common\\QueueManagement.Common.csproj",
+        "packagesPath": "C:\\Users\\m_ghasemi\\.nuget\\packages\\",
+        "outputPath": "E:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.Common\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\m_ghasemi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Microsoft.Extensions.Configuration.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.DependencyInjection.Abstractions": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Microsoft.Extensions.Http": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "E:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.Gateway.MQ\\QueueManagement.Gateway.MQ.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "E:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.Gateway.MQ\\QueueManagement.Gateway.MQ.csproj",
+        "projectName": "QueueManagement.Gateway.MQ",
+        "projectPath": "E:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.Gateway.MQ\\QueueManagement.Gateway.MQ.csproj",
+        "packagesPath": "C:\\Users\\m_ghasemi\\.nuget\\packages\\",
+        "outputPath": "E:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.Gateway.MQ\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\m_ghasemi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net5.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net5.0": {
+            "targetAlias": "net5.0",
+            "projectReferences": {
+              "E:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.Common\\QueueManagement.Common.csproj": {
+                "projectPath": "E:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.Common\\QueueManagement.Common.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "net5.0": {
+          "targetAlias": "net5.0",
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
+            },
+            "RabbitMQ.Client": {
+              "target": "Package",
+              "version": "[6.2.2, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
