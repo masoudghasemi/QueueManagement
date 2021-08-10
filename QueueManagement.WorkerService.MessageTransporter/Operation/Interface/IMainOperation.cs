@@ -4,9 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QueueManagement.BLL.BusinessLogic.Interface
+namespace QueueManagement.WorkerService.MessageTransporter.Operation.Interface
 {
-    interface IQueueBL
+    public interface IMainOperation: IOperation
     {
+
     }
 }

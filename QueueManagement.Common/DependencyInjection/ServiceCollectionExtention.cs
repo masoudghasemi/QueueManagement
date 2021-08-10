@@ -12,7 +12,6 @@ namespace QueueManagement.Common.DependencyInjection
         public static IServiceCollection RegisterAppServices(this IServiceCollection services)
         {
             services.AddHttpClient();
-
             return services;
         }
 

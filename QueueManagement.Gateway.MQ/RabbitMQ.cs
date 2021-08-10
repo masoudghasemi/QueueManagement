@@ -1,4 +1,5 @@
 ﻿using QueueManagement.Common.Config;
+using QueueManagement.Gateway.MQ.Event.Args;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System;
@@ -119,7 +120,7 @@ namespace QueueManagement.Gateway.MQ
 
 
 
-        public bool ReceivedMessage(string queueName,bool durable,bool exclusive,bool autoDelete,IDictionary<string,object> arguments)
+        public bool MessageReceived(string queueName,bool durable,bool exclusive,bool autoDelete,IDictionary<string,object> arguments)
         {
             try
             {
@@ -131,7 +132,13 @@ namespace QueueManagement.Gateway.MQ
                     arguments: arguments);
 
                 var eventHandler = new EventingBasicConsumer(model);
-                eventHandler.Received += EventHandler_Received;
+                eventHandler.Received += (sender, e) => {
+                    var eventArgs = new MessageReceivedEventArgs
+                    {
+                        Message = e.Body.ToArray()
+                     };
+                    this.OnMessageReceived(eventArgs);
+                };
                 return true;
             }
             catch (Exception ex)
@@ -140,10 +147,17 @@ namespace QueueManagement.Gateway.MQ
             }
         }
 
-        private void EventHandler_Received(object sender, BasicDeliverEventArgs e)
+
+
+
+
+        public event EventHandler MessageReceivedEventHandler;
+        protected virtual void OnMessageReceived(MessageReceivedEventArgs e)
         {
-            
+            EventHandler handler = MessageReceivedEventHandler;
+            handler?.Invoke(this, e);
         }
     }
+
 
 }

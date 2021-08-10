@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "oP5YlND6z5eNlTVqeOPJy9rzsCOhz4GnXRCuiYGpyrG81SaI6gy9qHXzmz/ffqw3oFlaJOrXRTYeaJQqwpQYKw==",
+  "dgSpecHash": "9jH9Antdr6LHSIAb1Cy16T73sBgglU1YY0RtwagpvGKio0XH7bzVNQYaUcuS1+LZm1vJG6AShBQB0FSw+HhUNg==",
   "success": true,
   "projectFilePath": "E:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.WorkerService.MessageTransporter\\QueueManagement.WorkerService.MessageTransporter.csproj",
   "expectedPackageFiles": [

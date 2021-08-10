@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QueueManagement.Gateway.Service.ServiceLogic.Interface
+namespace QueueManagement.BLL.BusinessLogic.Interface
 {
-    public interface ISaramadSL
+    public  interface IMessageTransferBL
     {
-
     }
 }

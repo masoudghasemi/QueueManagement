@@ -54,7 +54,7 @@ namespace QueueManagement.Gateway.Service.ServiceLogic.Concrete
 
         // //////////////////////////////////////////////////////////////////////////////////////////////
 
-        public int SendTask(RuleServiceRequestAPIModel input)
+        public int SendMessage(RuleServiceRequestAPIModel input)
         {
             var url = config.RuleServiceUrl;
             input.token = Token.access_token;

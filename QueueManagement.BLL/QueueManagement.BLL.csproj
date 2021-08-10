@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\QueueManagement.Gateway.MQ\QueueManagement.Gateway.MQ.csproj" />
+    <ProjectReference Include="..\QueueManagement.Gateway.Service\QueueManagement.Gateway.Service.csproj" />
   </ItemGroup>
 
 </Project>

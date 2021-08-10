@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace QueueManagement.WorkerService.MessageTransporter
+namespace QueueManagement.Gateway.MQ.Event.Handler
 {
-    public class Management
+    class MessageReveivedEventHandler
     {
-      
     }
 }

@@ -508,7 +508,8 @@
         "framework": ".NETCoreApp,Version=v5.0",
         "dependencies": {
           "Newtonsoft.Json": "13.0.1",
-          "QueueManagement.Gateway.MQ": "1.0.0"
+          "QueueManagement.Gateway.MQ": "1.0.0",
+          "QueueManagement.Gateway.Service": "1.0.0"
         },
         "compile": {
           "bin/placeholder/QueueManagement.BLL.dll": {}
@@ -546,6 +547,20 @@
         },
         "runtime": {
           "bin/placeholder/QueueManagement.Gateway.MQ.dll": {}
+        }
+      },
+      "QueueManagement.Gateway.Service/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v5.0",
+        "dependencies": {
+          "Newtonsoft.Json": "13.0.1",
+          "QueueManagement.Common": "1.0.0"
+        },
+        "compile": {
+          "bin/placeholder/QueueManagement.Gateway.Service.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/QueueManagement.Gateway.Service.dll": {}
         }
       }
     }
@@ -1390,6 +1405,11 @@
       "type": "project",
       "path": "../QueueManagement.Gateway.MQ/QueueManagement.Gateway.MQ.csproj",
       "msbuildProject": "../QueueManagement.Gateway.MQ/QueueManagement.Gateway.MQ.csproj"
+    },
+    "QueueManagement.Gateway.Service/1.0.0": {
+      "type": "project",
+      "path": "../QueueManagement.Gateway.Service/QueueManagement.Gateway.Service.csproj",
+      "msbuildProject": "../QueueManagement.Gateway.Service/QueueManagement.Gateway.Service.csproj"
     }
   },
   "projectFileDependencyGroups": {
