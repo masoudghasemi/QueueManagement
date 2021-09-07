@@ -10,6 +10,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\QueueManagement.Common\QueueManagement.Common.csproj" />
+    <ProjectReference Include="..\QueueManagement.IOC\QueueManagement.IOC.csproj" />
   </ItemGroup>
 
 </Project>

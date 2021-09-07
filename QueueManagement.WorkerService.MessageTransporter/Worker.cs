@@ -1,6 +1,6 @@
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
-using QueueManagement.WorkerService.MessageTransporter.Operation.Interface;
+using QueueManagement.BLL.BusinessLogic.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,22 +12,24 @@ namespace QueueManagement.WorkerService.MessageTransporter
     public class Worker : BackgroundService
     {
         private readonly ILogger<Worker> _logger;
-        protected readonly IMainOperation mainOperation;
+        private readonly IMessageTransferBL _messageTransferBL;
 
-        public Worker(ILogger<Worker> logger, IMainOperation mainOperation)
+        public Worker(ILogger<Worker> logger, IMessageTransferBL messageTransferBL )
         {
             _logger = logger;
-            this.mainOperation = mainOperation;
+            _messageTransferBL = messageTransferBL;
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
+
             while (!stoppingToken.IsCancellationRequested)
             {
-                //_logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
-                mainOperation.DoActions();
+
+                _messageTransferBL.TransferMessageFromQueueToSaramad();
                 await Task.Delay(1000, stoppingToken);
             }
+
         }
     }
 }

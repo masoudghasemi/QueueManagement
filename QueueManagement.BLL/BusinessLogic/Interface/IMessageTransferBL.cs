@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace QueueManagement.BLL.BusinessLogic.Interface
 {
-    public  interface IMessageTransferBL
+    public  interface IMessageTransferBL:IBL
     {
+
+        public void TransferMessageFromQueueToSaramad();
+
+        public void TransferMessageFromSaramatToQueue();
     }
 }

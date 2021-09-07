@@ -15,3 +15,12 @@ E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.BLL\obj\Debug\net5.0\Queue
 E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.BLL\obj\Debug\net5.0\QueueManagement.BLL.dll
 E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.BLL\obj\Debug\net5.0\ref\QueueManagement.BLL.dll
 E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.BLL\obj\Debug\net5.0\QueueManagement.BLL.pdb
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.BLL\bin\Debug\net5.0\QueueManagement.Gateway.Service.dll
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.BLL\bin\Debug\net5.0\QueueManagement.Gateway.Service.pdb
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.BLL\bin\Debug\net5.0\QueueManagement.BLL.runtimeconfig.json
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.BLL\bin\Debug\net5.0\QueueManagement.BLL.runtimeconfig.dev.json
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.BLL\bin\Debug\net5.0\QueueManagement.DAL.dll
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.BLL\bin\Debug\net5.0\QueueManagement.DAL.pdb
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.BLL\obj\Debug\net5.0\QueueManagement.BLL.genruntimeconfig.cache
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.BLL\bin\Debug\net5.0\Framework.dll
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.BLL\bin\Debug\net5.0\Framework.pdb

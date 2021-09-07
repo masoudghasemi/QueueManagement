@@ -1,5 +1,6 @@
 ﻿using QueueManagement.Common.Config;
 using QueueManagement.Gateway.MQ.Event.Args;
+using QueueManagement.Gateway.MQ.Model;
 using RabbitMQ.Client;
 using RabbitMQ.Client.Events;
 using System;
@@ -22,6 +23,12 @@ namespace QueueManagement.Gateway.MQ
             this.rabbitMQConfig = rabbitMQConfig;
             this.model = CreateModel();
         }
+
+        // /////////////////////////////////////////////////////////////////////////////
+
+        private IModel Model { get { return model; } }
+
+
 
         // /////////////////////////////////////////////////////////////////////////////
 
@@ -60,18 +67,16 @@ namespace QueueManagement.Gateway.MQ
         // /////////////////////////////////////////////////////////////////////////////
 
 
-        public IModel Model { get { return model; } }
 
-        public bool QueueDeclare(string queueName, bool durable, bool exclusive, bool autoDelete, IDictionary<string, object> arguments)
+        public bool QueueDeclare(string queueName)
         {
-            try
-            {
-                model.QueueDeclare(
+            try { 
+                var result=model.QueueDeclare(
                 queue: queueName,
-                 durable: durable,
-                 exclusive: exclusive,
-                 autoDelete: autoDelete,
-                 arguments: arguments);
+                 durable: true,
+                 exclusive: true,
+                 autoDelete: false,
+                 arguments: null);
                 return true;
             }
             catch (Exception ex)
@@ -81,82 +86,75 @@ namespace QueueManagement.Gateway.MQ
         }
         //// /////////////////////////////////////////////////////////////////////////////
 
-        public bool BasicPublish(string exchange, string routingKey, IBasicProperties basicProperties, ReadOnlyMemory<byte> body)
+        public void SendMessage(string queue,ReadOnlyMemory<byte> body)
         {
-            try
-            {
+            this.QueueDeclare(queue);
                 model.BasicPublish(
-                   exchange: exchange,
-                   routingKey: routingKey,
-                   basicProperties: basicProperties,
+                   exchange: "",
+                   routingKey: queue,
+                   basicProperties: null,
                    body: body);
-                return true;
-            }
-            catch (Exception ex)
-            {
-                return false;
-            }
+
         }
+        //// /////////////////////////////////////////////////////////////////////////////
 
 
-        public bool PublishMessage(string exchange, string routingKey, bool mandatory = false, IBasicProperties basicProperties = null, ReadOnlyMemory<byte> body = default)
+        public RecieveMessageModel RecieveMessage(string queue)
         {
-            try
+            this.QueueDeclare(queue);
+            var basicGetResult = model.BasicGet(queue,false);
+            if (basicGetResult == null) return null;
+            return new RecieveMessageModel
             {
-                model.BasicPublish(
-                   exchange: exchange,
-                   routingKey: routingKey,
-                   mandatory:mandatory,
-                   basicProperties: basicProperties,
-                   body: body);
-                return true;
-            }
-            catch (Exception ex)
-            {
-                return false;
-            }
+                Body = basicGetResult.Body,
+                DeliveryTag = basicGetResult.DeliveryTag
+            };
         }
 
+        //// /////////////////////////////////////////////////////////////////////////////
 
-
-
-        public bool MessageReceived(string queueName,bool durable,bool exclusive,bool autoDelete,IDictionary<string,object> arguments)
+        public void BasicAcc(ulong deliveryTag)
         {
-            try
-            {
-                model.QueueDeclare(
-                    queue: queueName,
-                    durable: durable,
-                    exclusive: exclusive,
-                    autoDelete: autoDelete,
-                    arguments: arguments);
-
-                var eventHandler = new EventingBasicConsumer(model);
-                eventHandler.Received += (sender, e) => {
-                    var eventArgs = new MessageReceivedEventArgs
-                    {
-                        Message = e.Body.ToArray()
-                     };
-                    this.OnMessageReceived(eventArgs);
-                };
-                return true;
-            }
-            catch (Exception ex)
-            {
-                return false;
-            }
+            model.BasicAck(deliveryTag,false);
         }
 
+        //// /////////////////////////////////////////////////////////////////////////////
 
 
 
+        //public bool MessageReceived(string queueName,bool durable,bool exclusive,bool autoDelete,IDictionary<string,object> arguments)
+        //{
+        //    try
+        //    {
+        //        model.QueueDeclare(
+        //            queue: queueName,
+        //            durable: durable,
+        //            exclusive: exclusive,
+        //            autoDelete: autoDelete,
+        //            arguments: arguments);
 
-        public event EventHandler MessageReceivedEventHandler;
-        protected virtual void OnMessageReceived(MessageReceivedEventArgs e)
-        {
-            EventHandler handler = MessageReceivedEventHandler;
-            handler?.Invoke(this, e);
-        }
+        //        var eventHandler = new EventingBasicConsumer(model);
+        //        eventHandler.Received += (sender, e) => {
+        //            var eventArgs = new MessageReceivedEventArgs
+        //            {
+        //                Message = e.Body.ToArray()
+        //             };
+        //            this.OnMessageReceived(eventArgs);
+        //        };
+        //        return true;
+        //    }
+        //    catch (Exception ex)
+        //    {
+        //        return false;
+        //    }
+        //}
+
+        //public event EventHandler MessageReceivedEventHandler;
+        //protected virtual void OnMessageReceived(MessageReceivedEventArgs e)
+        //{
+        //    EventHandler handler = MessageReceivedEventHandler;
+        //    handler?.Invoke(this, e);
+        //}
     }
 
 

@@ -12,7 +12,7 @@ namespace QueueManagement.Common.Config
         protected IConfiguration configuration;
         public AbstractConfig(IConfiguration configuration)
         {
-            configuration = configuration;
+            this.configuration = configuration;
         }
     }
 }

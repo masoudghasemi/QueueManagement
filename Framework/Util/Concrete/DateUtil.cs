@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Framework.Util.Concrete
 {
-    class DateUtil : IDateUtil
+    public class DateUtil : IDateUtil
     {
         public string DateTimeToPersianDate(DateTime? dateTime, char dateDivider)
         {

@@ -1,4 +1,5 @@
-﻿using RabbitMQ.Client;
+﻿using QueueManagement.Gateway.MQ.Model;
+using RabbitMQ.Client;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,11 +10,11 @@ namespace QueueManagement.Gateway.MQ
 {
     public interface IRabbitMQ
     {
-        public IModel Model { get; }
-        public bool MessageReceived(string queueName, bool durable, bool exclusive, bool autoDelete, IDictionary<string, object> arguments);
-        public bool PublishMessage(string exchange, string routingKey, bool mandatory = false, IBasicProperties basicProperties = null, ReadOnlyMemory<byte> body = default);
+        public void SendMessage(string queue, ReadOnlyMemory<byte> body);
 
-        public event EventHandler MessageReceivedEventHandler;
+        public RecieveMessageModel RecieveMessage(string queue);
+
+        public void BasicAcc(ulong deliveryTag);
 
 
     }

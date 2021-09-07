@@ -10,3 +10,9 @@ E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.DAL\obj\Debug\net5.0\Queue
 E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.DAL\obj\Debug\net5.0\QueueManagement.DAL.dll
 E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.DAL\obj\Debug\net5.0\ref\QueueManagement.DAL.dll
 E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.DAL\obj\Debug\net5.0\QueueManagement.DAL.pdb
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.DAL\bin\Debug\net5.0\QueueManagement.DAL.runtimeconfig.json
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.DAL\bin\Debug\net5.0\QueueManagement.DAL.runtimeconfig.dev.json
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.DAL\obj\Debug\net5.0\QueueManagement.DAL.genruntimeconfig.cache
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.DAL\bin\Debug\net5.0\Framework.dll
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.DAL\bin\Debug\net5.0\Framework.pdb
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.DAL\obj\Debug\net5.0\QueueManagement.DAL.csproj.CopyComplete

@@ -11,5 +11,6 @@
 
   <ItemGroup>
     <ProjectReference Include="..\QueueManagement.BLL\QueueManagement.BLL.csproj" />
+    <ProjectReference Include="..\QueueManagement.IOC\QueueManagement.IOC.csproj" />
   </ItemGroup>
 </Project>

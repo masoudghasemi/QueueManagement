@@ -6,15 +6,22 @@
 
   <ItemGroup>
     <Folder Include="BusinessModel\" />
-    <Folder Include="CQS\" />
-    <Folder Include="Mapping\" />
+    <Folder Include="CQS\Command\" />
+    <Folder Include="CQS\CommandHandler\" />
+    <Folder Include="CQS\QueryHandler\" />
+    <Folder Include="CQS\Query\" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="5.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\QueueManagement.DAL\QueueManagement.DAL.csproj" />
     <ProjectReference Include="..\QueueManagement.Gateway.MQ\QueueManagement.Gateway.MQ.csproj" />
     <ProjectReference Include="..\QueueManagement.Gateway.Service\QueueManagement.Gateway.Service.csproj" />
   </ItemGroup>

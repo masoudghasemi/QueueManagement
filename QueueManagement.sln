@@ -3,23 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.31410.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueManagement.BLL", "QueueManagement.BLL\QueueManagement.BLL.csproj", "{1E864D22-9A90-4952-BEE5-066CF8776E30}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueManagement.BLL", "QueueManagement.BLL\QueueManagement.BLL.csproj", "{1E864D22-9A90-4952-BEE5-066CF8776E30}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueManagement.DAL", "QueueManagement.DAL\QueueManagement.DAL.csproj", "{CEE273CE-0A82-432B-B245-B558CC7C71AF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueManagement.DAL", "QueueManagement.DAL\QueueManagement.DAL.csproj", "{CEE273CE-0A82-432B-B245-B558CC7C71AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueManagement.Common", "QueueManagement.Common\QueueManagement.Common.csproj", "{96299860-7939-4C3F-B54E-EEE9FBB9BBF6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueManagement.Common", "QueueManagement.Common\QueueManagement.Common.csproj", "{96299860-7939-4C3F-B54E-EEE9FBB9BBF6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueManagement.EndPoint.WebApi", "QueueManagement.EndPoint.WebApi\QueueManagement.EndPoint.WebApi.csproj", "{E2149D0F-2162-4D5A-896A-E9DEA214EC25}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueManagement.EndPoint.WebApi", "QueueManagement.EndPoint.WebApi\QueueManagement.EndPoint.WebApi.csproj", "{E2149D0F-2162-4D5A-896A-E9DEA214EC25}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueManagement.EndPoint.WebUI", "QueueManagement.EndPoint.WebUI\QueueManagement.EndPoint.WebUI.csproj", "{EAD905AD-41E5-4E41-A0E7-96FF5EA34B05}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueManagement.EndPoint.WebUI", "QueueManagement.EndPoint.WebUI\QueueManagement.EndPoint.WebUI.csproj", "{EAD905AD-41E5-4E41-A0E7-96FF5EA34B05}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Framework", "Framework\Framework.csproj", "{CBC1C990-2D82-4CBE-8278-EB2E4CA0DB27}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Framework", "Framework\Framework.csproj", "{CBC1C990-2D82-4CBE-8278-EB2E4CA0DB27}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueManagement.Gateway.Service", "QueueManagement.Gateway.Service\QueueManagement.Gateway.Service.csproj", "{31B345C8-C9B3-4C95-A04F-CFB403B580D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueManagement.Gateway.Service", "QueueManagement.Gateway.Service\QueueManagement.Gateway.Service.csproj", "{31B345C8-C9B3-4C95-A04F-CFB403B580D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueManagement.Gateway.MQ", "QueueManagement.Gateway.MQ\QueueManagement.Gateway.MQ.csproj", "{D77C9748-7C62-454A-B19B-40971835D70A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueManagement.Gateway.MQ", "QueueManagement.Gateway.MQ\QueueManagement.Gateway.MQ.csproj", "{D77C9748-7C62-454A-B19B-40971835D70A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueManagement.WorkerService.MessageTransporter", "QueueManagement.WorkerService.MessageTransporter\QueueManagement.WorkerService.MessageTransporter.csproj", "{12A20677-CCFE-4445-9441-22796F393E3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueManagement.WorkerService.MessageTransporter", "QueueManagement.WorkerService.MessageTransporter\QueueManagement.WorkerService.MessageTransporter.csproj", "{12A20677-CCFE-4445-9441-22796F393E3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueManagement.IOC", "QueueManagement.IOC\QueueManagement.IOC.csproj", "{8D27C39B-070D-4452-BF7C-25F6FF413E2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.ManualTest", "Test.ManualTest\Test.ManualTest.csproj", "{3757146D-873F-4A10-B822-C65C809AD1B7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -63,6 +67,14 @@ Global
 		{12A20677-CCFE-4445-9441-22796F393E3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{12A20677-CCFE-4445-9441-22796F393E3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{12A20677-CCFE-4445-9441-22796F393E3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8D27C39B-070D-4452-BF7C-25F6FF413E2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8D27C39B-070D-4452-BF7C-25F6FF413E2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8D27C39B-070D-4452-BF7C-25F6FF413E2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8D27C39B-070D-4452-BF7C-25F6FF413E2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3757146D-873F-4A10-B822-C65C809AD1B7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3757146D-873F-4A10-B822-C65C809AD1B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3757146D-873F-4A10-B822-C65C809AD1B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3757146D-873F-4A10-B822-C65C809AD1B7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

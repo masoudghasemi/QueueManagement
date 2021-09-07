@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QueueManagement.BLL.BusinessLogic.Interface
 {
-    interface IBL
+    public interface IBL
     {
     }
 }
