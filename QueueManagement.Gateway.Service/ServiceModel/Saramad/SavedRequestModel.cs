@@ -13,7 +13,7 @@ namespace QueueManagement.Gateway.Service.ServiceModel.Saramad
         public int RequestStatusId { get; set; }
         public RequestStatusEnum RequestStatus => (RequestStatusEnum)RequestStatusId;
         public string RequestBody { get; set; }
-        public RuleServiceRequestModel RequestBodyObject => JsonSerializer.Deserialize<RuleServiceRequestModel>(RequestBody);
+        public RuleServiceRequest RequestBodyObject => JsonSerializer.Deserialize<RuleServiceRequest>(RequestBody);
         public DateTime ReceivedDate { get; set; }
         public string TrackingNumber { get; set; }
         public bool IsSentToRuleService { get; set; }

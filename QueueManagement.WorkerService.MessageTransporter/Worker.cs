@@ -18,6 +18,7 @@ namespace QueueManagement.WorkerService.MessageTransporter
         {
             _logger = logger;
             _messageTransferBL = messageTransferBL;
+            
         }
 
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
@@ -25,11 +26,16 @@ namespace QueueManagement.WorkerService.MessageTransporter
 
             while (!stoppingToken.IsCancellationRequested)
             {
-
-                _messageTransferBL.TransferMessageFromQueueToSaramad();
+                try
+                {
+                    _messageTransferBL.TransferMessage();
+                }
+                catch (Exception ex)
+                {
+                    _logger.LogError(ex,"");
+                }
                 await Task.Delay(1000, stoppingToken);
             }
-
         }
     }
 }

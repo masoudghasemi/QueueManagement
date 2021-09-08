@@ -15,6 +15,8 @@ namespace QueueManagement.Gateway.MQ
     {
         protected readonly IRabbitMQConfig rabbitMQConfig;
         protected IModel model;
+        protected IConnection connection;
+
 
         // /////////////////////////////////////////////////////////////////////////////
 
@@ -38,8 +40,8 @@ namespace QueueManagement.Gateway.MQ
             {
                 UserName = this.rabbitMQConfig.UserName,
                 Password = this.rabbitMQConfig.Password,
-                Port = this.rabbitMQConfig.Port,
-                VirtualHost = this.rabbitMQConfig.VirtualHost,
+                //Port = this.rabbitMQConfig.Port,
+                //VirtualHost = this.rabbitMQConfig.VirtualHost,
                 HostName = this.rabbitMQConfig.HostName
             };
             connectionFactory.DispatchConsumersAsync = true;
@@ -51,6 +53,7 @@ namespace QueueManagement.Gateway.MQ
         {
             var connectionFactory = CreateConnectionFactory();
             var connection = connectionFactory.CreateConnection();
+            this.connection = connection;
             return connection;
 
         }
@@ -71,12 +74,7 @@ namespace QueueManagement.Gateway.MQ
         public bool QueueDeclare(string queueName)
         {
             try { 
-                var result=model.QueueDeclare(
-                queue: queueName,
-                 durable: true,
-                 exclusive: true,
-                 autoDelete: false,
-                 arguments: null);
+                var result=model.QueueDeclare(queueName, durable: true, exclusive: false, autoDelete: false);
                 return true;
             }
             catch (Exception ex)
@@ -88,7 +86,7 @@ namespace QueueManagement.Gateway.MQ
 
         public void SendMessage(string queue,ReadOnlyMemory<byte> body)
         {
-            this.QueueDeclare(queue);
+           // this.QueueDeclare(queue);
                 model.BasicPublish(
                    exchange: "",
                    routingKey: queue,
@@ -99,12 +97,12 @@ namespace QueueManagement.Gateway.MQ
         //// /////////////////////////////////////////////////////////////////////////////
 
 
-        public RecieveMessageModel RecieveMessage(string queue)
+        public MessageModel RecieveMessage(string queue)
         {
-            this.QueueDeclare(queue);
+           // this.QueueDeclare(queue);
             var basicGetResult = model.BasicGet(queue,false);
             if (basicGetResult == null) return null;
-            return new RecieveMessageModel
+            return new MessageModel
             {
                 Body = basicGetResult.Body,
                 DeliveryTag = basicGetResult.DeliveryTag
@@ -119,7 +117,13 @@ namespace QueueManagement.Gateway.MQ
         }
 
         //// /////////////////////////////////////////////////////////////////////////////
-
+        public void Dispose()
+        {
+            if (model.IsOpen)
+                model.Close();
+            if (connection.IsOpen)
+                connection.Close();
+        }
 
 
         //public bool MessageReceived(string queueName,bool durable,bool exclusive,bool autoDelete,IDictionary<string,object> arguments)

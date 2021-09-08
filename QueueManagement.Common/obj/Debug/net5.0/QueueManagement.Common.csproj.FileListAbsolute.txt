@@ -10,3 +10,4 @@ E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\obj\Debug\net5.0\Qu
 E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\obj\Debug\net5.0\QueueManagement.Common.dll
 E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\obj\Debug\net5.0\ref\QueueManagement.Common.dll
 E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\obj\Debug\net5.0\QueueManagement.Common.pdb
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\bin\Debug\net5.0\appsettings.json

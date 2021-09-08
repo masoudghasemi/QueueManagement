@@ -7,23 +7,25 @@ using System.Threading.Tasks;
 
 namespace QueueManagement.Common.Config
 {
-    public class RabbitMQConfig : AbstractConfig, IRabbitMQConfig
+    public class RabbitMQConfig :  IRabbitMQConfig
     {
-        protected readonly IConfigurationSection configurationSection;
-        public RabbitMQConfig(IConfiguration configuration):base(configuration)
+
+        protected readonly IConfiguration configuration;
+        public RabbitMQConfig(IConfiguration configuration)
         {
-            configurationSection.GetSection("RabbitMQConfig");
+            this.configuration = configuration;
         }
 
-        public string UserName { get { return ""; } }
 
-        public string Password { get { return ""; } }
+        public string UserName { get { return configuration.GetValue<string>("RabbitMQ:UserName"); } }
 
-        public int Port { get { return 0; } }
+        public string Password { get { return configuration.GetValue<string>("RabbitMQ:Password"); } }
 
-        public string VirtualHost { get { return ""; } }
+        public int Port { get { return int.Parse( configuration.GetValue<string>("RabbitMQ:Port")); } }
 
-        public string HostName  { get { return ""; }}
+        public string VirtualHost { get { return configuration.GetValue<string>("RabbitMQ:VirtualHost"); } }
+
+        public string HostName { get { return configuration.GetValue<string>("RabbitMQ:HostName"); } }
 
 
         //UserName = "admin",

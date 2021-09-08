@@ -23,3 +23,4 @@ E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.IOC\obj\Debug\net5.0\Queue
 E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.IOC\obj\Debug\net5.0\QueueManagement.IOC.dll
 E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.IOC\obj\Debug\net5.0\ref\QueueManagement.IOC.dll
 E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.IOC\obj\Debug\net5.0\QueueManagement.IOC.pdb
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.IOC\bin\Debug\net5.0\appsettings.json

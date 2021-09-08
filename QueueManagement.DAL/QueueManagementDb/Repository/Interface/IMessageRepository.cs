@@ -10,5 +10,8 @@ namespace QueueManagement.DAL.QueueManagementDb.Repository.Interface
    public interface IMessageRepository:Framework.Contract.IRepository<Message>
     {
 
+
+        public bool IsExist(string identity, int producerId);
+
     }
 }

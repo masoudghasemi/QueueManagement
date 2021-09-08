@@ -10,9 +10,9 @@ namespace QueueManagement.Gateway.Service.ServiceLogic.Interface
     public interface ISaramadSL
     {
 
-        public GetAccessTokenResultAPIModel GetToken();
+        public GetAccessTokenResult GetToken();
 
-        public int SendRule(SavedRequestModel input);
+        public RuleServiceResponse SendRule(RuleServiceRequest input);
         //public Task<int> SendRuleAsync(RuleServiceRequestAPIModel input);
 
     }

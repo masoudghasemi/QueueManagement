@@ -11,23 +11,42 @@ namespace QueueManagement.BLL.Mapping
 {
     public  class Mapper: IMapper
     {
-        public  SavedRequestModel Map(RecieveMessageModel message)
-        {
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<SavedRequestModel>(Encoding.UTF8.GetString(message.Body.ToArray()));
-        }
 
-        public Message Map2(RecieveMessageModel message)
+        public Message Map(MessageModel message)
         {
             if (message == null) return null;
             return new Message
             {
-                BodyBinary=message.Body.ToArray(),
-                BodyJson= Encoding.UTF8.GetString(message.Body.ToArray()),
-                CreatedAt=DateTime.Now,
-                Identity=Map(message).TrackingNumber,
-                ProducerId=1,
-                QueueId=1
+                BodyBinary = message.Body.ToArray(),
+                BodyJson = Encoding.UTF8.GetString(message.Body.ToArray()),
+                InsertedAt = DateTime.Now,
+                Identity = Map2(message).trackingCode,
             };
         }
+
+
+
+        public RuleServiceRequest Map2(MessageModel message)
+        {
+            return Newtonsoft.Json.JsonConvert.DeserializeObject<RuleServiceRequest>(Encoding.UTF8.GetString(message.Body.ToArray()));
+        }
+
+
+
+        public Message Map(RuleServiceResponse response)
+        {
+            if (response == null) return null;
+            return new Message
+            {
+                Identity=response.trackingCode,
+                BodyBinary =Encoding.UTF8.GetBytes(Newtonsoft.Json.JsonConvert.SerializeObject(response)),
+                BodyJson = Newtonsoft.Json.JsonConvert.SerializeObject(response),
+                InsertedAt = DateTime.Now,
+            };
+        }
+
+
+
+        
     }
 }

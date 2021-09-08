@@ -8,25 +8,22 @@ using System.Threading.Tasks;
 
 namespace QueueManagement.Common.Config
 {
-    public class SaramadServiceConfig :/*AbstractConfig,*/ ISaramadServiceConfig
+    public class SaramadServiceConfig : ISaramadServiceConfig
     {
-        //protected readonly IConfigurationSection configurationSection;
-        //public SaramadServiceConfig(IConfiguration configuration) : base(configuration)
-        //{
-        //    configurationSection.GetSection("SaramadServiceConfig");
-        //}
+        protected readonly IConfiguration configuration;
+        public SaramadServiceConfig(IConfiguration configuration)
+        {
+            this.configuration = configuration;
+        }
 
+        public string AccessTokenUrl { get { return configuration.GetValue<string>("SaramadService:AccessTokenUrl"); } }
 
-
-        public string AccessTokenUrl { get { return "https://saramad-test.kashef.ir/auth/connect/token"; } }
-
-        public string TokenValidationUrl { get { return "https://saramad-test.kashef.ir/auth/connect/introspect"; } }
-        public string RuleServiceUrl { get { return "https://saramad-test.kashef.ir/workflow/api/RayBPMSService/InvokeRuleService"; } }
-
-        public string grant_type { get { return "client_credentials"; } }
-        public string client_id { get { return "api1"; } }
-        public string client_secret { get { return "secret"; } }
-        public string scope { get { return "IDPClients"; } }
+        public string TokenValidationUrl { get { return configuration.GetValue<string>("SaramadService:TokenValidationUrl"); } }
+        public string RuleServiceUrl { get { return configuration.GetValue<string>("SaramadService:RuleServiceUrl"); } }
+        public string grant_type { get { return configuration.GetValue<string>("SaramadService:Grant_Type"); } }
+        public string client_id { get { return configuration.GetValue<string>("SaramadService:Client_Id"); } }
+        public string client_secret { get { return configuration.GetValue<string>("SaramadService:Client_Secret"); } }
+        public string scope { get { return configuration.GetValue<string>("SaramadService:Scope"); } }
 
     }
 

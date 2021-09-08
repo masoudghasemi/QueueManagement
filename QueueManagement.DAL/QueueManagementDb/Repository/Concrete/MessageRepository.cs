@@ -74,6 +74,13 @@ namespace QueueManagement.DAL.QueueManagementDb.Repository.Concrete
             throw new NotImplementedException();
         }
 
+        public bool IsExist(string identity,int producerId)
+        {
+            return context.Messages
+                .Where(item => item.Identity == identity && item.ProducerId==producerId)
+                .Any();
+        }
+
         public void Update(Message obj)
         {
             throw new NotImplementedException();

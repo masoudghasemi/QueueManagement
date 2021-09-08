@@ -99,3 +99,11 @@ E:\M_Ghasemi\Projects\QueueManagement\Test.ManualTest\obj\Debug\net5.0\Test.Manu
 E:\M_Ghasemi\Projects\QueueManagement\Test.ManualTest\obj\Debug\net5.0\ref\Test.ManualTest.dll
 E:\M_Ghasemi\Projects\QueueManagement\Test.ManualTest\obj\Debug\net5.0\Test.ManualTest.pdb
 E:\M_Ghasemi\Projects\QueueManagement\Test.ManualTest\obj\Debug\net5.0\Test.ManualTest.genruntimeconfig.cache
+E:\M_Ghasemi\Projects\QueueManagement\Test.ManualTest\bin\Debug\net5.0\Humanizer.dll
+E:\M_Ghasemi\Projects\QueueManagement\Test.ManualTest\bin\Debug\net5.0\Microsoft.EntityFrameworkCore.Design.dll
+E:\M_Ghasemi\Projects\QueueManagement\Test.ManualTest\bin\Debug\net5.0\Microsoft.Azure.Services.AppAuthentication.dll
+E:\M_Ghasemi\Projects\QueueManagement\Test.ManualTest\bin\Debug\net5.0\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+E:\M_Ghasemi\Projects\QueueManagement\Test.ManualTest\bin\Debug\net5.0\Serilog.dll
+E:\M_Ghasemi\Projects\QueueManagement\Test.ManualTest\bin\Debug\net5.0\Serilog.Sinks.MSSqlServer.dll
+E:\M_Ghasemi\Projects\QueueManagement\Test.ManualTest\bin\Debug\net5.0\Serilog.Sinks.PeriodicBatching.dll
+E:\M_Ghasemi\Projects\QueueManagement\Test.ManualTest\bin\Debug\net5.0\appsettings.json

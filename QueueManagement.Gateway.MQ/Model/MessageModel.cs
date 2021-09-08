@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace QueueManagement.Gateway.MQ.Model
 {
-    public class RecieveMessageModel
+    public class MessageModel
     {
 
         public ReadOnlyMemory<byte> Body { get; set; }

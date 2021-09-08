@@ -9,8 +9,10 @@ namespace QueueManagement.BLL.BusinessLogic.Interface
     public  interface IMessageTransferBL:IBL
     {
 
-        public void TransferMessageFromQueueToSaramad();
+        public void TransferMessage();
 
-        public void TransferMessageFromSaramatToQueue();
+        //public void TransferMessageFromQueueToSaramad();
+
+        //public void TransferMessageFromSaramatToQueue();
     }
 }

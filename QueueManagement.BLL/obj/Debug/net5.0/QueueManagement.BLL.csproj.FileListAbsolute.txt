@@ -24,3 +24,4 @@ E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.BLL\bin\Debug\net5.0\Queue
 E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.BLL\obj\Debug\net5.0\QueueManagement.BLL.genruntimeconfig.cache
 E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.BLL\bin\Debug\net5.0\Framework.dll
 E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.BLL\bin\Debug\net5.0\Framework.pdb
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.BLL\bin\Debug\net5.0\appsettings.json

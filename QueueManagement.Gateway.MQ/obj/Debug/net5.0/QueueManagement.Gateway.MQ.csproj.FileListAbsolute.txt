@@ -13,3 +13,4 @@ E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Gateway.MQ\obj\Debug\net5.
 E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Gateway.MQ\obj\Debug\net5.0\QueueManagement.Gateway.MQ.dll
 E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Gateway.MQ\obj\Debug\net5.0\ref\QueueManagement.Gateway.MQ.dll
 E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Gateway.MQ\obj\Debug\net5.0\QueueManagement.Gateway.MQ.pdb
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Gateway.MQ\bin\Debug\net5.0\appsettings.json

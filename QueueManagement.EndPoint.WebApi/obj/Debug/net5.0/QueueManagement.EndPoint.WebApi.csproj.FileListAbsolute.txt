@@ -72,3 +72,12 @@ E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.EndPoint.WebApi\bin\Debug\
 E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.EndPoint.WebApi\bin\Debug\net5.0\QueueManagement.DAL.pdb
 E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.EndPoint.WebApi\bin\Debug\net5.0\QueueManagement.Gateway.MQ.pdb
 E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.EndPoint.WebApi\bin\Debug\net5.0\QueueManagement.Gateway.Service.pdb
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.EndPoint.WebApi\bin\Debug\net5.0\Framework.dll
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.EndPoint.WebApi\bin\Debug\net5.0\QueueManagement.IOC.dll
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.EndPoint.WebApi\bin\Debug\net5.0\QueueManagement.IOC.pdb
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.EndPoint.WebApi\bin\Debug\net5.0\Framework.pdb
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.EndPoint.WebApi\bin\Debug\net5.0\Microsoft.Azure.Services.AppAuthentication.dll
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.EndPoint.WebApi\bin\Debug\net5.0\Microsoft.IdentityModel.Clients.ActiveDirectory.dll
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.EndPoint.WebApi\bin\Debug\net5.0\Serilog.dll
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.EndPoint.WebApi\bin\Debug\net5.0\Serilog.Sinks.MSSqlServer.dll
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.EndPoint.WebApi\bin\Debug\net5.0\Serilog.Sinks.PeriodicBatching.dll

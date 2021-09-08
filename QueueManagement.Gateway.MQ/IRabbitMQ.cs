@@ -12,10 +12,9 @@ namespace QueueManagement.Gateway.MQ
     {
         public void SendMessage(string queue, ReadOnlyMemory<byte> body);
 
-        public RecieveMessageModel RecieveMessage(string queue);
+        public MessageModel RecieveMessage(string queue);
 
         public void BasicAcc(ulong deliveryTag);
-
-
+        void Dispose();
     }
 }

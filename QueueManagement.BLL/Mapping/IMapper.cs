@@ -11,7 +11,11 @@ namespace QueueManagement.BLL.Mapping
 {
     public interface IMapper
     {
-        public  SavedRequestModel Map(RecieveMessageModel message);
-        public Message Map2(RecieveMessageModel message);
+
+        public Message Map(MessageModel message);
+        public RuleServiceRequest Map2(MessageModel message);
+
+
+        public Message Map(RuleServiceResponse response);
     }
 }

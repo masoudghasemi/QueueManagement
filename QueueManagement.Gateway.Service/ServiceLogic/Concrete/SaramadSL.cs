@@ -16,7 +16,7 @@ namespace QueueManagement.Gateway.Service.ServiceLogic.Concrete
         protected readonly ISaramadServiceConfig config;
         protected readonly IHttpClientFactory httpClientFactory;
         protected readonly HttpClient Client;
-        public static GetAccessTokenResultAPIModel Token { get; set; }
+        public static GetAccessTokenResult Token { get; set; }
 
         public SaramadSL (  ISaramadServiceConfig saramadServiceConfig,    IHttpClientFactory httpClientFactory )
         {
@@ -31,7 +31,7 @@ namespace QueueManagement.Gateway.Service.ServiceLogic.Concrete
 
 
         // //////////////////////////////////////////////////////////////////////////////////////////////
-        public GetAccessTokenResultAPIModel GetToken()
+        public GetAccessTokenResult GetToken()
         {
             var url = config.AccessTokenUrl;
             var username = config.client_id;
@@ -46,13 +46,13 @@ namespace QueueManagement.Gateway.Service.ServiceLogic.Concrete
             var request = new FormUrlEncodedContent(KeyValues);
             var response = Client.PostAsync(url, request);
             var responseContent = response.Result.Content.ReadAsStringAsync().Result;
-            var outputModel = Newtonsoft.Json.JsonConvert.DeserializeObject<GetAccessTokenResultAPIModel>(responseContent);
+            var outputModel = Newtonsoft.Json.JsonConvert.DeserializeObject<GetAccessTokenResult>(responseContent);
             return outputModel;
         }
 
         // //////////////////////////////////////////////////////////////////////////////////////////////
 
-        private async Task<GetAccessTokenResultAPIModel> GetTokenAsync()
+        private async Task<GetAccessTokenResult> GetTokenAsync()
         {
             return await Task.Run(() =>
             {
@@ -62,21 +62,23 @@ namespace QueueManagement.Gateway.Service.ServiceLogic.Concrete
 
         // //////////////////////////////////////////////////////////////////////////////////////////////
 
-        public int SendRule(SavedRequestModel input)
+        public RuleServiceResponse SendRule(RuleServiceRequest input)
         {
-            var url = config.RuleServiceUrl;
-            var ruleServiceAPIRequest = new RuleServiceRequestAPIModel()
+            //var url = config.RuleServiceUrl;
+            //input.token = Token.access_token;
+            //var json = Newtonsoft.Json.JsonConvert.SerializeObject(input);
+            //var request =  new StringContent(json, Encoding.UTF8, "application/json");
+            //var response = Client.PostAsync(url, request);
+            //var httpResponse = response.Result;
+            //var Content = httpResponse.Content.ReadAsStringAsync().Result;
+            //var outputModel = Newtonsoft.Json.JsonConvert.DeserializeObject<RuleServiceResponse>(Content);
+            //return outputModel;
+            return new RuleServiceResponse
             {
-                code = input.RequestBodyObject.code,
-                domainObjectInfos = input.RequestBodyObject.domainObjectInfos,
-                parameters = input.RequestBodyObject.parameters,
-                token = Token.access_token
+                trackingCode = input.trackingCode,
+                resDesc = "",
+                resNo = "1",
             };
-            var request =  new StringContent(Newtonsoft.Json.JsonConvert.SerializeObject(ruleServiceAPIRequest), Encoding.UTF8, "application/json");
-            var response = Client.PostAsync(url, request);
-            var responseContent = response.Result.Content.ReadAsStringAsync().Result;
-            var outputModel = Newtonsoft.Json.JsonConvert.DeserializeObject<int>(responseContent);
-            return outputModel;
         }
         // //////////////////////////////////////////////////////////////////////////////////////////////
 

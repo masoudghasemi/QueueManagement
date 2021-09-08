@@ -1,10 +1,12 @@
 ﻿using Framework.Util.Concrete;
 using Framework.Util.Interface;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using QueueManagement.BLL.BusinessLogic.Concrete;
 using QueueManagement.BLL.BusinessLogic.Interface;
 using QueueManagement.BLL.Mapping;
 using QueueManagement.Common.Config;
+using QueueManagement.Common.Config.Concrete;
 using QueueManagement.Common.Config.Interface;
 using QueueManagement.DAL.QueueManagementDb.Entity;
 using QueueManagement.DAL.QueueManagementDb.Repository.Concrete;
@@ -23,6 +25,12 @@ namespace QueueManagement.IOC
 
         public static IServiceCollection Register(this IServiceCollection services)
         {
+
+            var builder = new ConfigurationBuilder() .AddJsonFile("appsettings.json"); 
+            IConfiguration configuration = builder.Build();
+            services.AddScoped<IConfiguration>(_ => configuration);
+
+
             services.AddHttpClient();
 
             services.RegisterBLL();
@@ -75,6 +83,8 @@ namespace QueueManagement.IOC
         {
             services.AddScoped<ISaramadSL, SaramadSL>();
             services.AddScoped<IRabbitMQ, QueueManagement.Gateway.MQ.RabbitMQ>();
+            services.AddScoped<ICommonConfig, CommonConfig>();
+
 
             return services;
         }

@@ -1,5 +1,6 @@
 ﻿using QueueManagement.BLL.BusinessLogic.Interface;
 using QueueManagement.BLL.Mapping;
+using QueueManagement.Common.Config.Interface;
 using QueueManagement.DAL.QueueManagementDb.Entity;
 using QueueManagement.DAL.QueueManagementDb.UnitOfWork;
 using QueueManagement.Gateway.MQ;
@@ -20,71 +21,57 @@ namespace QueueManagement.BLL.BusinessLogic.Concrete
         protected readonly ISaramadSL  saramadSL;
         protected readonly IMapper mapper;
         protected readonly IQueueManagementUnitOfWork queueManagementUnitOfWork;
+        protected readonly ICommonConfig commonConfig;
 
-        public MessageTransferBL(IRabbitMQ rabbitMQ , ISaramadSL saramadSL,IMapper mapper , IQueueManagementUnitOfWork queueManagementUnitOfWork)
+
+        // ////////////////////////////////////////////////////////////////////////
+
+        public MessageTransferBL(
+            IRabbitMQ rabbitMQ ,
+            ISaramadSL saramadSL,
+            IMapper mapper ,
+            IQueueManagementUnitOfWork queueManagementUnitOfWork,
+            ICommonConfig commonConfig)
         {
             this.rabbitMQ = rabbitMQ;   
-            this.saramadSL = saramadSL; // saramad service logic => saramad service api
-           // this.MessageReceived("SendRule", true, true, false, null);  //SendRule   SendRuleStatus   SendRuleResponse
+            this.saramadSL = saramadSL;
             this.mapper = mapper;
             this.queueManagementUnitOfWork = queueManagementUnitOfWork;
-        }
-
-        // ////////////////////////////////////////////////////////////////////////
-
-        public void TransferMessageFromQueueToSaramad()
-        {
-            try
-            {
-                var message = rabbitMQ.RecieveMessage("Rule");
-                var rule = mapper.Map(message);
-                var resultSendRule = saramadSL.SendRule(rule);
-                if (resultSendRule <= 0) return;
-                var messageEntity = mapper.Map2(message);
-                queueManagementUnitOfWork.MessageRepository.Add(messageEntity);// implement db layer
-                queueManagementUnitOfWork.Save();
-                rabbitMQ.BasicAcc(message.DeliveryTag);
-
-            }
-            catch (Exception ex)
-            {
-
+            this.commonConfig = commonConfig;
             }
 
-           
-            
-
-        }
         // ////////////////////////////////////////////////////////////////////////
 
-        public void TransferMessageFromSaramatToQueue()
+        public void TransferMessage()
         {
+            int dadgostaryProducerId = 1;
+            int saramadProducerId = 2;
+            int ruleQueueId = 1;
+            int ruleResponseQueueId = 2;
 
-            // get response status    and responser full from temp db  or saramad service
+            var message = rabbitMQ.RecieveMessage(commonConfig.RuleQueueName);
+            var messageRequest = mapper.Map(message);
+            messageRequest.ProducerId = dadgostaryProducerId;
+            messageRequest.QueueId = ruleQueueId;
+            queueManagementUnitOfWork.MessageRepository.Add(messageRequest);
+            queueManagementUnitOfWork.Save();
 
-            // send to queue
+
+            var ruleServiceRequest = mapper.Map2(message);
+            var ruleServiceResponse = saramadSL.SendRule(ruleServiceRequest);
+            var messageResponse = mapper.Map(ruleServiceResponse);
+            messageResponse.ProducerId = saramadProducerId;
+            messageResponse.QueueId = ruleResponseQueueId;
+            messageResponse.RelatedMessageId = messageRequest.Id;
+            queueManagementUnitOfWork.MessageRepository.Add(messageResponse);
+            queueManagementUnitOfWork.Save();
+
+
+            rabbitMQ.SendMessage(commonConfig.RuleResponseQueueName, messageResponse.BodyBinary); 
+            rabbitMQ.BasicAcc(message.DeliveryTag); 
 
         }
-
-
         // ////////////////////////////////////////////////////////////////////////
-
-        //public void MessageReceived(string queueName, bool durable, bool exclusive, bool autoDelete, IDictionary<string, object> arguments)
-        //{
-        //    rabbitMQ.MessageReceived(queueName, durable, exclusive, autoDelete, arguments);
-        //    rabbitMQ.MessageReceivedEventHandler += (sender, e) =>
-        //    {
-        //        var args = (MessageReceivedEventArgs)e;
-
-        //        // first insert message to database
-
-        //        // second - send message to saramad
-
-
-
-        //    };
-        //}
-
 
     }
 }

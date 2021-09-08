@@ -5,9 +5,9 @@ using System.Collections.Generic;
 
 namespace QueueManagement.DAL.QueueManagementDb.Entity
 {
-    public partial class Client
+    public partial class Producer
     {
-        public Client()
+        public Producer()
         {
             Messages = new HashSet<Message>();
         }
