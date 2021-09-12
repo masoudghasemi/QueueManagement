@@ -25,11 +25,13 @@ namespace Test.ManualTest
         public static void Main(string[] args)
         {
             //Test_TokenService();
-            //Test_RuleService();
-            //Test_SendMessageToRuleQueue();
+            Test_RuleService();
+            Test_RuleService();
+            //
+            // Test_SendMessageToRuleQueue();
 
             //Test_RecieveMessageFromRuleQueue();
-            Test_TransferMessage();
+            //Test_TransferMessage();
 
 
         }

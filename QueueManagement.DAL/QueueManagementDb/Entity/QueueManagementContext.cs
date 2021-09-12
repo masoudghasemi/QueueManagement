@@ -1,6 +1,7 @@
 ﻿using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata;
+using QueueManagement.Common.Config.Interface;
 
 #nullable disable
 
@@ -8,8 +9,10 @@ namespace QueueManagement.DAL.QueueManagementDb.Entity
 {
     public partial class QueueManagementContext : DbContext
     {
-        public QueueManagementContext()
+        //public IConnectionStringConfig connectionStringConfig;
+        public QueueManagementContext(/*IConnectionStringConfig connectionStringConfig*/)
         {
+            //this.connectionStringConfig = connectionStringConfig;
         }
 
         public QueueManagementContext(DbContextOptions<QueueManagementContext> options)
@@ -25,7 +28,6 @@ namespace QueueManagement.DAL.QueueManagementDb.Entity
         {
             if (!optionsBuilder.IsConfigured)
             {
-#warning To protect potentially sensitive information in your connection string, you should move it out of source code. You can avoid scaffolding the connection string by using the Name= syntax to read it from configuration - see https://go.microsoft.com/fwlink/?linkid=2131148. For more guidance on storing connection strings, see http://go.microsoft.com/fwlink/?LinkId=723263.
                 optionsBuilder.UseSqlServer("Server=.;Database=QueueManagement;Trusted_Connection=True;");
             }
         }

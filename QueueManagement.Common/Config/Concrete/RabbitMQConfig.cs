@@ -21,7 +21,7 @@ namespace QueueManagement.Common.Config
 
         public string Password { get { return configuration.GetValue<string>("RabbitMQ:Password"); } }
 
-        public int Port { get { return int.Parse( configuration.GetValue<string>("RabbitMQ:Port")); } }
+        public int Port { get { return configuration.GetValue<int>("RabbitMQ:Port"); } }
 
         public string VirtualHost { get { return configuration.GetValue<string>("RabbitMQ:VirtualHost"); } }
 

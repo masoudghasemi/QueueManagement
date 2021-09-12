@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "KQaW69LjJ46Ixq9C3wxBjJUZJzQwYjAJCUYtxZGSZXFLpKuT2FQ1RNn0AQsdv/JLd4F2Q+TEK++9bXCKpb0x/g==",
+  "dgSpecHash": "bK1k8YZLRbq4nrnghs6y6jR/mKEKnCwC6p8R+WFv45RqgzKhe4KGLa/+3hqBB1DQf8dYLsUI2QYobWl0IFf41w==",
   "success": true,
   "projectFilePath": "E:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.DAL\\QueueManagement.DAL.csproj",
   "expectedPackageFiles": [
@@ -25,6 +25,7 @@
     "C:\\Users\\m_ghasemi\\.nuget\\packages\\microsoft.extensions.configuration.binder\\2.0.0\\microsoft.extensions.configuration.binder.2.0.0.nupkg.sha512",
     "C:\\Users\\m_ghasemi\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\5.0.2\\microsoft.extensions.dependencyinjection.5.0.2.nupkg.sha512",
     "C:\\Users\\m_ghasemi\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\5.0.0\\microsoft.extensions.dependencyinjection.abstractions.5.0.0.nupkg.sha512",
+    "C:\\Users\\m_ghasemi\\.nuget\\packages\\microsoft.extensions.http\\5.0.0\\microsoft.extensions.http.5.0.0.nupkg.sha512",
     "C:\\Users\\m_ghasemi\\.nuget\\packages\\microsoft.extensions.logging\\5.0.0\\microsoft.extensions.logging.5.0.0.nupkg.sha512",
     "C:\\Users\\m_ghasemi\\.nuget\\packages\\microsoft.extensions.logging.abstractions\\5.0.0\\microsoft.extensions.logging.abstractions.5.0.0.nupkg.sha512",
     "C:\\Users\\m_ghasemi\\.nuget\\packages\\microsoft.extensions.options\\5.0.0\\microsoft.extensions.options.5.0.0.nupkg.sha512",

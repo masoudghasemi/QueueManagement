@@ -274,6 +274,9 @@
             "projectReferences": {
               "E:\\M_Ghasemi\\Projects\\QueueManagement\\Framework\\Framework.csproj": {
                 "projectPath": "E:\\M_Ghasemi\\Projects\\QueueManagement\\Framework\\Framework.csproj"
+              },
+              "E:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.Common\\QueueManagement.Common.csproj": {
+                "projectPath": "E:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.Common\\QueueManagement.Common.csproj"
               }
             }
           }
@@ -634,6 +637,10 @@
             "Serilog": {
               "target": "Package",
               "version": "[2.10.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[4.1.0, )"
             },
             "Serilog.Sinks.MSSqlServer": {
               "target": "Package",

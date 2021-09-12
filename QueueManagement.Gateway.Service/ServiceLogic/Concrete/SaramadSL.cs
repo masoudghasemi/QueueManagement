@@ -64,15 +64,15 @@ namespace QueueManagement.Gateway.Service.ServiceLogic.Concrete
 
         public RuleServiceResponse SendRule(RuleServiceRequest input)
         {
-            //var url = config.RuleServiceUrl;
-            //input.token = Token.access_token;
-            //var json = Newtonsoft.Json.JsonConvert.SerializeObject(input);
-            //var request =  new StringContent(json, Encoding.UTF8, "application/json");
-            //var response = Client.PostAsync(url, request);
-            //var httpResponse = response.Result;
-            //var Content = httpResponse.Content.ReadAsStringAsync().Result;
-            //var outputModel = Newtonsoft.Json.JsonConvert.DeserializeObject<RuleServiceResponse>(Content);
-            //return outputModel;
+            var url = config.RuleServiceUrl;
+            input.token = Token.access_token;
+            var json = Newtonsoft.Json.JsonConvert.SerializeObject(input);
+            var request = new StringContent(json, Encoding.UTF8, "application/json");
+            var response = Client.PostAsync(url, request);
+            var httpResponse = response.Result;
+            var Content = httpResponse.Content.ReadAsStringAsync().Result;
+            var outputModel = Newtonsoft.Json.JsonConvert.DeserializeObject<RuleServiceResponse>(Content);
+            return outputModel;
             return new RuleServiceResponse
             {
                 trackingCode = input.trackingCode,

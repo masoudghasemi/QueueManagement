@@ -50,6 +50,8 @@ namespace QueueManagement.BLL.BusinessLogic.Concrete
             int ruleResponseQueueId = 2;
 
             var message = rabbitMQ.RecieveMessage(commonConfig.RuleQueueName);
+            if (message == null) return;
+
             var messageRequest = mapper.Map(message);
             messageRequest.ProducerId = dadgostaryProducerId;
             messageRequest.QueueId = ruleQueueId;

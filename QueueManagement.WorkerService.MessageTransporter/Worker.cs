@@ -1,6 +1,8 @@
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using QueueManagement.BLL.BusinessLogic.Interface;
+using QueueManagement.Common.Config.Concrete;
+using QueueManagement.Common.Config.Interface;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,13 +13,15 @@ namespace QueueManagement.WorkerService.MessageTransporter
 {
     public class Worker : BackgroundService
     {
-        private readonly ILogger<Worker> _logger;
-        private readonly IMessageTransferBL _messageTransferBL;
+        private readonly Serilog.ILogger logger;
+        private readonly IWorkerServiceConfig workerServiceConfig;
+        private readonly IMessageTransferBL messageTransferBL;
 
-        public Worker(ILogger<Worker> logger, IMessageTransferBL messageTransferBL )
+        public Worker(Serilog.ILogger logger, IMessageTransferBL messageTransferBL ,IWorkerServiceConfig workerServiceConfig)
         {
-            _logger = logger;
-            _messageTransferBL = messageTransferBL;
+            this.logger = logger;
+            this.workerServiceConfig = workerServiceConfig;
+            this.messageTransferBL = messageTransferBL;
             
         }
 
@@ -28,13 +32,13 @@ namespace QueueManagement.WorkerService.MessageTransporter
             {
                 try
                 {
-                    _messageTransferBL.TransferMessage();
+                     messageTransferBL.TransferMessage();
                 }
                 catch (Exception ex)
                 {
-                    _logger.LogError(ex,"");
+                    logger.Error(ex,messageTemplate:"execption");
                 }
-                await Task.Delay(1000, stoppingToken);
+                await Task.Delay(workerServiceConfig.Interval, stoppingToken);
             }
         }
     }

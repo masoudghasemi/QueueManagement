@@ -14,7 +14,7 @@ namespace QueueManagement.Gateway.Service.ServiceModel.Saramad
         public string resDesc { get; set; }
 
 
-        public List<string> resSubOrderTrackingCodes { get; set; }
+        public string resSubOrderTrackingCodes { get; set; }
 
     }
 }
