@@ -9,8 +9,8 @@ namespace QueueManagement.Gateway.Service.ServiceModel.Saramad
     public class RuleServiceRequest
     {
 
-        public string receivedDate { get; set; }
-        public string ipAddress { get; set; }
+        //public string receivedDate { get; set; }
+        //public string ipAddress { get; set; }
         public string trackingCode { get; set; }
         public string code { get; set; }
         public DomainObjectInfos domainObjectInfos { get; set; }

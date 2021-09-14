@@ -1,0 +1,16 @@
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Gateway.MQ\bin\Release\net5.0\appsettings.json
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Gateway.MQ\bin\Release\net5.0\QueueManagement.Gateway.MQ.deps.json
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Gateway.MQ\bin\Release\net5.0\QueueManagement.Gateway.MQ.dll
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Gateway.MQ\bin\Release\net5.0\ref\QueueManagement.Gateway.MQ.dll
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Gateway.MQ\bin\Release\net5.0\QueueManagement.Gateway.MQ.pdb
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Gateway.MQ\bin\Release\net5.0\QueueManagement.Common.dll
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Gateway.MQ\bin\Release\net5.0\QueueManagement.Common.pdb
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Gateway.MQ\obj\Release\net5.0\QueueManagement.Gateway.MQ.csproj.AssemblyReference.cache
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Gateway.MQ\obj\Release\net5.0\QueueManagement.Gateway.MQ.GeneratedMSBuildEditorConfig.editorconfig
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Gateway.MQ\obj\Release\net5.0\QueueManagement.Gateway.MQ.AssemblyInfoInputs.cache
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Gateway.MQ\obj\Release\net5.0\QueueManagement.Gateway.MQ.AssemblyInfo.cs
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Gateway.MQ\obj\Release\net5.0\QueueManagement.Gateway.MQ.csproj.CoreCompileInputs.cache
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Gateway.MQ\obj\Release\net5.0\QueueManagement.Gateway.MQ.csproj.CopyComplete
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Gateway.MQ\obj\Release\net5.0\QueueManagement.Gateway.MQ.dll
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Gateway.MQ\obj\Release\net5.0\ref\QueueManagement.Gateway.MQ.dll
+E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Gateway.MQ\obj\Release\net5.0\QueueManagement.Gateway.MQ.pdb

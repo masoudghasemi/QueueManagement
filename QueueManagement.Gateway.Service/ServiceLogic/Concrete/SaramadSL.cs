@@ -70,15 +70,27 @@ namespace QueueManagement.Gateway.Service.ServiceLogic.Concrete
             var request = new StringContent(json, Encoding.UTF8, "application/json");
             var response = Client.PostAsync(url, request);
             var httpResponse = response.Result;
-            var Content = httpResponse.Content.ReadAsStringAsync().Result;
-            var outputModel = Newtonsoft.Json.JsonConvert.DeserializeObject<RuleServiceResponse>(Content);
-            return outputModel;
-            return new RuleServiceResponse
+            var content = httpResponse.Content.ReadAsStringAsync().Result;
+
+            try
             {
-                trackingCode = input.trackingCode,
-                resDesc = "",
-                resNo = "1",
-            };
+                var outputModel = Newtonsoft.Json.JsonConvert.DeserializeObject<RuleServiceResponse>(content);
+                return outputModel;
+            }
+            catch (Exception )
+            {
+                content = content.Substring(1, content.Length - 2).Replace("\\\"", "\"").Replace("\\\\\"", "\\\"");
+                var outputModelTemp = Newtonsoft.Json.JsonConvert.DeserializeObject<RuleServiceResponseTemp>(content);
+                var resSubOrderTrackingCodesList = Newtonsoft.Json.JsonConvert.DeserializeObject<List<string>>(outputModelTemp.resSubOrderTrackingCodes);
+                return new RuleServiceResponse
+                {
+                    trackingCode = outputModelTemp.trackingCode,
+                    resDesc = outputModelTemp.resDesc,
+                    resNO = outputModelTemp.resNO,
+                    resSubOrderTrackingCodes = resSubOrderTrackingCodesList
+                };
+            }
+
         }
         // //////////////////////////////////////////////////////////////////////////////////////////////
 

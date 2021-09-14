@@ -17,7 +17,9 @@ using QueueManagement.Gateway.MQ;
 using QueueManagement.Gateway.Service.ServiceLogic.Concrete;
 using QueueManagement.Gateway.Service.ServiceLogic.Interface;
 using Serilog;
+using Serilog.Sinks.MSSqlServer;
 using System;
+using System.Collections.Generic;
 
 namespace QueueManagement.IOC
 {
@@ -36,16 +38,40 @@ namespace QueueManagement.IOC
             IConfiguration configuration = builder.Build();
             services.AddSingleton<IConfiguration>(_ => configuration);
 
+
+            List<SqlColumn> sqlColumns = new List<SqlColumn>();
+            
+
+            sqlColumns.Add(new SqlColumn
+            {
+                ColumnName = "IntervalId",
+                AllowNull = true,
+                DataType = System.Data.SqlDbType.UniqueIdentifier,
+                PropertyName = "IntervalId"
+            });
+            sqlColumns.Add(new SqlColumn
+            {
+                ColumnName = "Identity",
+                AllowNull = true,
+                DataType = System.Data.SqlDbType.NVarChar,
+                DataLength = 100,
+                PropertyName = "Identity"
+
+            });
             // serilog service
             services.AddSingleton<Serilog.ILogger>(x =>
             {
                 return new LoggerConfiguration()
                 .WriteTo.MSSqlServer(
-                    configuration["Serilog:ConnectionString"], 
-                    configuration["Serilog:TableName"], 
-                    autoCreateSqlTable: true)
+                    configuration["Serilog:ConnectionString"],
+                    configuration["Serilog:TableName"],
+                    autoCreateSqlTable: true, columnOptions: new Serilog.Sinks.MSSqlServer.ColumnOptions
+                    {
+                        AdditionalColumns = sqlColumns
+                    })
                 .CreateLogger();
             });
+
 
 
             // dbContext service
@@ -53,9 +79,6 @@ namespace QueueManagement.IOC
                 options => options.UseSqlServer(configuration.GetConnectionString("QueueManagementDb")),
                 ServiceLifetime.Singleton
                  );
-
-
-
             services.AddHttpClient();
             services.RegisterBLL();
             services.RegisterDAL();
@@ -64,6 +87,7 @@ namespace QueueManagement.IOC
             services.RegisterOthers();
             return services;
         }
+
 
         // ///////////////////////////////////////////////////////////////////////////////////////////
 

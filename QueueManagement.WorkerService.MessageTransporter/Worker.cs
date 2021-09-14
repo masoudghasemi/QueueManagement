@@ -28,18 +28,29 @@ namespace QueueManagement.WorkerService.MessageTransporter
         protected override async Task ExecuteAsync(CancellationToken stoppingToken)
         {
 
-            while (!stoppingToken.IsCancellationRequested)
+            try
             {
-                try
+                logger.Information(Common.Const.LogInformation.ServiceStared);
+                while (!stoppingToken.IsCancellationRequested)
                 {
-                     messageTransferBL.TransferMessage();
+                    try
+                    {
+                        var intervalId = Guid.NewGuid();
+                        messageTransferBL.TransferMessage(intervalId);
+                    }
+                    catch (Exception ex)
+                    {
+                        logger.Error(ex,"");
+                    }
+                    await Task.Delay(workerServiceConfig.Interval, stoppingToken);
                 }
-                catch (Exception ex)
-                {
-                    logger.Error(ex,messageTemplate:"execption");
-                }
-                await Task.Delay(workerServiceConfig.Interval, stoppingToken);
             }
+            catch (Exception ex)
+            {
+                logger.Error(ex, "");
+            }
+
+
         }
     }
 }

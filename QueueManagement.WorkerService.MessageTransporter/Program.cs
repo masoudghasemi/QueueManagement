@@ -20,6 +20,7 @@ namespace QueueManagement.WorkerService.MessageTransporter
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>
             Host.CreateDefaultBuilder(args)
+            .UseWindowsService()
             .UseSerilog()
             .ConfigureServices((hostContext, services) =>
                 {

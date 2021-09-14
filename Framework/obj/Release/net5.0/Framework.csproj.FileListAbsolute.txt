@@ -1,0 +1,12 @@
+E:\M_Ghasemi\Projects\QueueManagement\Framework\bin\Release\net5.0\Framework.deps.json
+E:\M_Ghasemi\Projects\QueueManagement\Framework\bin\Release\net5.0\Framework.dll
+E:\M_Ghasemi\Projects\QueueManagement\Framework\bin\Release\net5.0\ref\Framework.dll
+E:\M_Ghasemi\Projects\QueueManagement\Framework\bin\Release\net5.0\Framework.pdb
+E:\M_Ghasemi\Projects\QueueManagement\Framework\obj\Release\net5.0\Framework.csproj.AssemblyReference.cache
+E:\M_Ghasemi\Projects\QueueManagement\Framework\obj\Release\net5.0\Framework.GeneratedMSBuildEditorConfig.editorconfig
+E:\M_Ghasemi\Projects\QueueManagement\Framework\obj\Release\net5.0\Framework.AssemblyInfoInputs.cache
+E:\M_Ghasemi\Projects\QueueManagement\Framework\obj\Release\net5.0\Framework.AssemblyInfo.cs
+E:\M_Ghasemi\Projects\QueueManagement\Framework\obj\Release\net5.0\Framework.csproj.CoreCompileInputs.cache
+E:\M_Ghasemi\Projects\QueueManagement\Framework\obj\Release\net5.0\Framework.dll
+E:\M_Ghasemi\Projects\QueueManagement\Framework\obj\Release\net5.0\ref\Framework.dll
+E:\M_Ghasemi\Projects\QueueManagement\Framework\obj\Release\net5.0\Framework.pdb

@@ -21,9 +21,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueManagement.Gateway.MQ"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueManagement.WorkerService.MessageTransporter", "QueueManagement.WorkerService.MessageTransporter\QueueManagement.WorkerService.MessageTransporter.csproj", "{12A20677-CCFE-4445-9441-22796F393E3D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "QueueManagement.IOC", "QueueManagement.IOC\QueueManagement.IOC.csproj", "{8D27C39B-070D-4452-BF7C-25F6FF413E2D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "QueueManagement.IOC", "QueueManagement.IOC\QueueManagement.IOC.csproj", "{8D27C39B-070D-4452-BF7C-25F6FF413E2D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.ManualTest", "Test.ManualTest\Test.ManualTest.csproj", "{3757146D-873F-4A10-B822-C65C809AD1B7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Test.ManualTest", "Test.ManualTest\Test.ManualTest.csproj", "{3757146D-873F-4A10-B822-C65C809AD1B7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test.ManualTest.WinForm", "Test.ManualTest.WinForm\Test.ManualTest.WinForm.csproj", "{EEAC6FCE-9DBC-4ECD-871A-A31965B32A91}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{3757146D-873F-4A10-B822-C65C809AD1B7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3757146D-873F-4A10-B822-C65C809AD1B7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3757146D-873F-4A10-B822-C65C809AD1B7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EEAC6FCE-9DBC-4ECD-871A-A31965B32A91}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EEAC6FCE-9DBC-4ECD-871A-A31965B32A91}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EEAC6FCE-9DBC-4ECD-871A-A31965B32A91}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EEAC6FCE-9DBC-4ECD-871A-A31965B32A91}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

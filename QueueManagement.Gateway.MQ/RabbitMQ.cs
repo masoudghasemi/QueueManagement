@@ -16,6 +16,8 @@ namespace QueueManagement.Gateway.MQ
         protected readonly IRabbitMQConfig rabbitMQConfig;
         protected IModel model;
         protected IConnection connection;
+        protected IBasicProperties basicProperties;
+
 
 
         // /////////////////////////////////////////////////////////////////////////////
@@ -24,12 +26,14 @@ namespace QueueManagement.Gateway.MQ
         {
             this.rabbitMQConfig = rabbitMQConfig;
             this.model = CreateModel();
+
+            this.basicProperties = model.CreateBasicProperties();
+            this.basicProperties.Persistent = true;
         }
 
         // /////////////////////////////////////////////////////////////////////////////
 
-        private IModel Model { get { return model; } }
-
+        protected IModel Model { get { return model; } }
 
 
         // /////////////////////////////////////////////////////////////////////////////
@@ -90,7 +94,7 @@ namespace QueueManagement.Gateway.MQ
                 model.BasicPublish(
                    exchange: "",
                    routingKey: queue,
-                   basicProperties: null,
+                   basicProperties: basicProperties,
                    body: body);
 
         }

@@ -9,7 +9,7 @@ namespace QueueManagement.BLL.BusinessLogic.Interface
     public  interface IMessageTransferBL:IBL
     {
 
-        public void TransferMessage();
+        public void TransferMessage(Guid intervalId);
 
         //public void TransferMessageFromQueueToSaramad();
 
