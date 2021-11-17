@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yvnLXs9s5nrdOqn4k7SUvCROaflCrAEN92Fz2Z/p+5Awaiw6GxqfaY8EqiflRtl7T6a6q3vb5tj0Ke/Bne11Dw==",
+  "dgSpecHash": "pasI9wTUkO76Bh+GpkiZvxiZNPXN1t3kOgtAHY44Vp4qF9Uy1s6J8r/Ibhqnu5Uc1xtGGnuzilRDvPno9RvT9Q==",
   "success": true,
-  "projectFilePath": "E:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.Common\\QueueManagement.Common.csproj",
+  "projectFilePath": "D:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.Common\\QueueManagement.Common.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\m_ghasemi\\.nuget\\packages\\microsoft.azure.services.appauthentication\\1.4.0\\microsoft.azure.services.appauthentication.1.4.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

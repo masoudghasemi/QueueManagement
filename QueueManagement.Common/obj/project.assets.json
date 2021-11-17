@@ -7133,11 +7133,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.Common\\QueueManagement.Common.csproj",
+      "projectUniqueName": "D:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.Common\\QueueManagement.Common.csproj",
       "projectName": "QueueManagement.Common",
-      "projectPath": "E:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.Common\\QueueManagement.Common.csproj",
+      "projectPath": "D:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.Common\\QueueManagement.Common.csproj",
       "packagesPath": "C:\\Users\\m_ghasemi\\.nuget\\packages\\",
-      "outputPath": "E:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.Common\\obj\\",
+      "outputPath": "D:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.Common\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -7151,6 +7151,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "D:\\M_Ghasemi\\Projects\\Framework\\Framework\\bin\\Release\\net5.0\\publish": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -7209,7 +7210,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

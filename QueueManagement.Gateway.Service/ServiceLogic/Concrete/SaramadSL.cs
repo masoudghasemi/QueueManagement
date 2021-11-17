@@ -16,7 +16,7 @@ namespace QueueManagement.Gateway.Service.ServiceLogic.Concrete
         protected readonly ISaramadServiceConfig config;
         protected readonly IHttpClientFactory httpClientFactory;
         protected readonly HttpClient Client;
-        public static GetAccessTokenResult Token { get; set; }
+        public static TokenResponse Token { get; set; }
 
         public SaramadSL (  ISaramadServiceConfig saramadServiceConfig,    IHttpClientFactory httpClientFactory )
         {
@@ -24,14 +24,13 @@ namespace QueueManagement.Gateway.Service.ServiceLogic.Concrete
             this.httpClientFactory = httpClientFactory;
             this.Client = httpClientFactory.CreateClient();
             Token = GetToken();
-            
         }
 
 
 
 
         // //////////////////////////////////////////////////////////////////////////////////////////////
-        public GetAccessTokenResult GetToken()
+        public TokenResponse GetToken()
         {
             var url = config.AccessTokenUrl;
             var username = config.client_id;
@@ -39,20 +38,20 @@ namespace QueueManagement.Gateway.Service.ServiceLogic.Concrete
             var basicAuth = Convert.ToBase64String(System.Text.ASCIIEncoding.ASCII.GetBytes($"{username}:{password}"));
             Client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Basic", basicAuth);
             var KeyValues = new List<KeyValuePair<string, string>>();
-            KeyValues.Add(new KeyValuePair<string, string>( nameof(config.client_id), config.client_id));
+            KeyValues.Add(new KeyValuePair<string, string>(nameof(config.client_id), config.client_id));
             KeyValues.Add(new KeyValuePair<string, string>(nameof(config.client_secret), config.client_secret));
             KeyValues.Add(new KeyValuePair<string, string>(nameof(config.grant_type), config.grant_type));
             KeyValues.Add(new KeyValuePair<string, string>(nameof(config.scope), config.scope));
             var request = new FormUrlEncodedContent(KeyValues);
             var response = Client.PostAsync(url, request);
             var responseContent = response.Result.Content.ReadAsStringAsync().Result;
-            var outputModel = Newtonsoft.Json.JsonConvert.DeserializeObject<GetAccessTokenResult>(responseContent);
+            var outputModel = Newtonsoft.Json.JsonConvert.DeserializeObject<TokenResponse>(responseContent);
             return outputModel;
         }
 
         // //////////////////////////////////////////////////////////////////////////////////////////////
 
-        private async Task<GetAccessTokenResult> GetTokenAsync()
+        public async Task<TokenResponse> GetTokenAsync()
         {
             return await Task.Run(() =>
             {
@@ -94,13 +93,13 @@ namespace QueueManagement.Gateway.Service.ServiceLogic.Concrete
         }
         // //////////////////////////////////////////////////////////////////////////////////////////////
 
-        //public async Task<int> SendRuleAsync(RuleServiceRequestAPIModel input)
-        //{
-        //    return await Task.Run(() =>
-        //    {
-        //        return this.SendRule(input);
-        //    });
-        //}
+        public async Task<RuleServiceResponse> SendRuleAsync(RuleServiceRequest input)
+        {
+            return await Task.Run(() =>
+            {
+                return this.SendRule(input);
+            });
+        }
         // //////////////////////////////////////////////////////////////////////////////////////////////
 
 

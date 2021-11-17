@@ -6964,11 +6964,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\M_Ghasemi\\Projects\\QueueManagement\\Framework\\Framework.csproj",
+      "projectUniqueName": "D:\\M_Ghasemi\\Projects\\QueueManagement\\Framework\\Framework.csproj",
       "projectName": "Framework",
-      "projectPath": "E:\\M_Ghasemi\\Projects\\QueueManagement\\Framework\\Framework.csproj",
+      "projectPath": "D:\\M_Ghasemi\\Projects\\QueueManagement\\Framework\\Framework.csproj",
       "packagesPath": "C:\\Users\\m_ghasemi\\.nuget\\packages\\",
-      "outputPath": "E:\\M_Ghasemi\\Projects\\QueueManagement\\Framework\\obj\\",
+      "outputPath": "D:\\M_Ghasemi\\Projects\\QueueManagement\\Framework\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -6982,6 +6982,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "D:\\M_Ghasemi\\Projects\\Framework\\Framework\\bin\\Release\\net5.0\\publish": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -7028,7 +7029,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }

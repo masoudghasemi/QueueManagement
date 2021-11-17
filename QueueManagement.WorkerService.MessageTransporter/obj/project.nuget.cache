@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "L2Ne7W5uQgvMCmPXzB12oNNTPLvzt0A4wWoNNXZga61PMwD40gtO39caNav4tsAVzrzWqvrDJ46vCzsecZbaxw==",
+  "dgSpecHash": "M9wXDU23Ts6G+SKTHP8JUXd5thbQrfJM6R34paXFjy8FKWDoLaXhCCy6P7HDq4bUoqaq7r688NwVTe4dVsZ0jA==",
   "success": true,
-  "projectFilePath": "E:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.WorkerService.MessageTransporter\\QueueManagement.WorkerService.MessageTransporter.csproj",
+  "projectFilePath": "D:\\M_Ghasemi\\Projects\\QueueManagement\\QueueManagement.WorkerService.MessageTransporter\\QueueManagement.WorkerService.MessageTransporter.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\m_ghasemi\\.nuget\\packages\\microsoft.azure.services.appauthentication\\1.4.0\\microsoft.azure.services.appauthentication.1.4.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
@@ -174,7 +174,8 @@
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmldocument\\4.3.0\\system.xml.xmldocument.4.3.0.nupkg.sha512",
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512"
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\system.xml.xmlserializer\\4.3.0\\system.xml.xmlserializer.4.3.0.nupkg.sha512",
+    "C:\\Users\\m_ghasemi\\.nuget\\packages\\framework\\1.0.0\\framework.1.0.0.nupkg.sha512"
   ],
   "logs": []
 }

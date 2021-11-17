@@ -8549,11 +8549,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\M_Ghasemi\\Projects\\QueueManagement\\Test.ManualTest.WinForm\\Test.ManualTest.WinForm.csproj",
+      "projectUniqueName": "D:\\M_Ghasemi\\Projects\\QueueManagement\\Test.ManualTest.WinForm\\Test.ManualTest.WinForm.csproj",
       "projectName": "Test.ManualTest.WinForm",
-      "projectPath": "E:\\M_Ghasemi\\Projects\\QueueManagement\\Test.ManualTest.WinForm\\Test.ManualTest.WinForm.csproj",
+      "projectPath": "D:\\M_Ghasemi\\Projects\\QueueManagement\\Test.ManualTest.WinForm\\Test.ManualTest.WinForm.csproj",
       "packagesPath": "C:\\Users\\m_ghasemi\\.nuget\\packages\\",
-      "outputPath": "E:\\M_Ghasemi\\Projects\\QueueManagement\\Test.ManualTest.WinForm\\obj\\",
+      "outputPath": "D:\\M_Ghasemi\\Projects\\QueueManagement\\Test.ManualTest.WinForm\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -8567,14 +8567,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "D:\\M_Ghasemi\\Projects\\Framework\\Framework\\bin\\Release\\net5.0\\publish": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net5.0-windows7.0": {
           "targetAlias": "net5.0-windows",
           "projectReferences": {
-            "E:\\M_Ghasemi\\Projects\\QueueManagement\\Test.ManualTest\\Test.ManualTest.csproj": {
-              "projectPath": "E:\\M_Ghasemi\\Projects\\QueueManagement\\Test.ManualTest\\Test.ManualTest.csproj"
+            "D:\\M_Ghasemi\\Projects\\QueueManagement\\Test.ManualTest\\Test.ManualTest.csproj": {
+              "projectPath": "D:\\M_Ghasemi\\Projects\\QueueManagement\\Test.ManualTest\\Test.ManualTest.csproj"
             }
           }
         }
@@ -8606,7 +8607,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.301\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.401\\RuntimeIdentifierGraph.json"
       }
     }
   }
