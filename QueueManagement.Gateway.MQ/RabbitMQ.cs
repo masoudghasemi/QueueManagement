@@ -44,8 +44,8 @@ namespace QueueManagement.Gateway.MQ
             {
                 UserName = this.rabbitMQConfig.UserName,
                 Password = this.rabbitMQConfig.Password,
-                //Port = this.rabbitMQConfig.Port,
-                //VirtualHost = this.rabbitMQConfig.VirtualHost,
+                Port = this.rabbitMQConfig.Port,
+                VirtualHost = this.rabbitMQConfig.VirtualHost,
                 HostName = this.rabbitMQConfig.HostName
             };
             connectionFactory.DispatchConsumersAsync = true;

@@ -11,3 +11,16 @@ E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\obj\Release\net5.0\
 E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\obj\Release\net5.0\ref\QueueManagement.Common.dll
 E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\obj\Release\net5.0\QueueManagement.Common.pdb
 E:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\obj\Release\net5.0\QueueManagement.Common.csproj.AssemblyReference.cache
+D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\bin\Release\net5.0\appsettings.json
+D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\bin\Release\net5.0\QueueManagement.Common.deps.json
+D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\bin\Release\net5.0\QueueManagement.Common.dll
+D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\bin\Release\net5.0\ref\QueueManagement.Common.dll
+D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\bin\Release\net5.0\QueueManagement.Common.pdb
+D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\obj\Release\net5.0\QueueManagement.Common.csproj.AssemblyReference.cache
+D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\obj\Release\net5.0\QueueManagement.Common.GeneratedMSBuildEditorConfig.editorconfig
+D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\obj\Release\net5.0\QueueManagement.Common.AssemblyInfoInputs.cache
+D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\obj\Release\net5.0\QueueManagement.Common.AssemblyInfo.cs
+D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\obj\Release\net5.0\QueueManagement.Common.csproj.CoreCompileInputs.cache
+D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\obj\Release\net5.0\QueueManagement.Common.dll
+D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\obj\Release\net5.0\ref\QueueManagement.Common.dll
+D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Common\obj\Release\net5.0\QueueManagement.Common.pdb

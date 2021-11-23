@@ -10,3 +10,15 @@ E:\M_Ghasemi\Projects\QueueManagement\Framework\obj\Debug\net5.0\Framework.cspro
 E:\M_Ghasemi\Projects\QueueManagement\Framework\obj\Debug\net5.0\Framework.dll
 E:\M_Ghasemi\Projects\QueueManagement\Framework\obj\Debug\net5.0\ref\Framework.dll
 E:\M_Ghasemi\Projects\QueueManagement\Framework\obj\Debug\net5.0\Framework.pdb
+D:\M_Ghasemi\Projects\QueueManagement\Framework\bin\Debug\net5.0\Framework.deps.json
+D:\M_Ghasemi\Projects\QueueManagement\Framework\bin\Debug\net5.0\Framework.dll
+D:\M_Ghasemi\Projects\QueueManagement\Framework\bin\Debug\net5.0\ref\Framework.dll
+D:\M_Ghasemi\Projects\QueueManagement\Framework\bin\Debug\net5.0\Framework.pdb
+D:\M_Ghasemi\Projects\QueueManagement\Framework\obj\Debug\net5.0\Framework.csproj.AssemblyReference.cache
+D:\M_Ghasemi\Projects\QueueManagement\Framework\obj\Debug\net5.0\Framework.GeneratedMSBuildEditorConfig.editorconfig
+D:\M_Ghasemi\Projects\QueueManagement\Framework\obj\Debug\net5.0\Framework.AssemblyInfoInputs.cache
+D:\M_Ghasemi\Projects\QueueManagement\Framework\obj\Debug\net5.0\Framework.AssemblyInfo.cs
+D:\M_Ghasemi\Projects\QueueManagement\Framework\obj\Debug\net5.0\Framework.csproj.CoreCompileInputs.cache
+D:\M_Ghasemi\Projects\QueueManagement\Framework\obj\Debug\net5.0\Framework.dll
+D:\M_Ghasemi\Projects\QueueManagement\Framework\obj\Debug\net5.0\ref\Framework.dll
+D:\M_Ghasemi\Projects\QueueManagement\Framework\obj\Debug\net5.0\Framework.pdb
