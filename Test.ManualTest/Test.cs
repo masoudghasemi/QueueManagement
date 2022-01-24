@@ -62,6 +62,21 @@ namespace Test.ManualTest
 
         }
 
+         /////////////////////////////////////////////////////////////////////////////////////
+
+        public static void Test_RecieveMessageFromRuleResponseQueue()
+        {
+
+            var rabbitMq = serviceProvider.GetService<IRabbitMQ>();
+            var message = rabbitMq.RecieveMessage("RuleResponse");
+            var buffer = message.Body.ToArray();
+            var json = Encoding.UTF8.GetString(buffer);
+            //rabbitMq.BasicAcc(message.DeliveryTag);
+            //rabbitMq.Dispose();
+
+        }
+
+
 
         // /////////////////////////////////////////////////////////////////////////////////////
 

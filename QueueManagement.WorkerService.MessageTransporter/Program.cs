@@ -15,7 +15,15 @@ namespace QueueManagement.WorkerService.MessageTransporter
     {
         public static void Main(string[] args)
         {
-            CreateHostBuilder(args).Build().Run();
+            try
+            {
+                CreateHostBuilder(args).Build().Run();
+            }
+            catch (Exception ex)
+            {
+                System.IO.File.AppendAllText(@"C:\log_QueueManagement.txt",ex.ToString());
+            }
+
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

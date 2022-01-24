@@ -161,7 +161,6 @@ D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.WorkerService.MessageTrans
 D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.WorkerService.MessageTransporter\obj\Debug\net5.0\QueueManagement.WorkerService.MessageTransporter.AssemblyInfoInputs.cache
 D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.WorkerService.MessageTransporter\obj\Debug\net5.0\QueueManagement.WorkerService.MessageTransporter.AssemblyInfo.cs
 D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.WorkerService.MessageTransporter\obj\Debug\net5.0\QueueManagement.WorkerService.MessageTransporter.csproj.CoreCompileInputs.cache
-D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.WorkerService.MessageTransporter\obj\Debug\net5.0\QueueManagement.WorkerService.MessageTransporter.csproj.CopyComplete
 D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.WorkerService.MessageTransporter\obj\Debug\net5.0\QueueManagement.WorkerService.MessageTransporter.dll
 D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.WorkerService.MessageTransporter\obj\Debug\net5.0\ref\QueueManagement.WorkerService.MessageTransporter.dll
 D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.WorkerService.MessageTransporter\obj\Debug\net5.0\QueueManagement.WorkerService.MessageTransporter.pdb

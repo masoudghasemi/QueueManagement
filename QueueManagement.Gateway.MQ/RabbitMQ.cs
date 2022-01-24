@@ -127,6 +127,7 @@ namespace QueueManagement.Gateway.MQ
                 model.Close();
             if (connection.IsOpen)
                 connection.Close();
+
         }
 
 

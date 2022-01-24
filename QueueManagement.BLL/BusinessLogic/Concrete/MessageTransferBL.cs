@@ -10,6 +10,7 @@ using QueueManagement.Gateway.MQ;
 using QueueManagement.Gateway.MQ.Event.Args;
 using QueueManagement.Gateway.MQ.Model;
 using QueueManagement.Gateway.Service.ServiceLogic.Interface;
+using QueueManagement.Gateway.Service.ServiceModel.Saramad;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -59,37 +60,88 @@ namespace QueueManagement.BLL.BusinessLogic.Concrete
 
         public void TransferMessage(Guid intervalId)
         {
-            var message = rabbitMQ.RecieveMessage(commonConfig.RuleQueueName);
-            if (message == null) return;
+            try
+            {
+                var message = rabbitMQ.RecieveMessage(commonConfig.RuleQueueName);
 
-            var messageRequest = mapper.Map(message);
-            logger.Information(LogInformation.Step1,intervalId, messageRequest.Identity,messageRequest.BodyJson );
-            messageRequest.ProducerId = this.dadgostariProducerId;
-            messageRequest.QueueId = this.ruleQueueId;
-            queueManagementUnitOfWork.MessageRepository.Add(messageRequest);
-            queueManagementUnitOfWork.Save();
-            logger.Information(LogInformation.Step2, intervalId, messageRequest.Identity, messageRequest.BodyJson);
+                if (message == null) return;
 
-            var ruleServiceRequest = mapper.Map2(message);
-            logger.Information(LogInformation.Step3, intervalId, ruleServiceRequest.trackingCode,JsonConvert.SerializeObject(ruleServiceRequest));
-            var ruleServiceResponse = saramadSL.SendRule(ruleServiceRequest);
-            ruleServiceResponse.trackingCode = ruleServiceRequest.trackingCode;
-            logger.Information(LogInformation.Step4, intervalId, ruleServiceResponse.trackingCode, JsonConvert.SerializeObject(ruleServiceResponse));
+                Message messageRequest= mapper.Map(message);
+                messageRequest.ProducerId = this.dadgostariProducerId;
+                messageRequest.QueueId = this.ruleQueueId;
 
-            var messageResponse = mapper.Map(ruleServiceResponse);
-            messageResponse.ProducerId = this.saramadProducerId;
-            messageResponse.QueueId = this.ruleResponseQueueId;
-            messageResponse.RelatedMessageId = messageRequest.Id;
-            queueManagementUnitOfWork.MessageRepository.Add(messageResponse);
-            queueManagementUnitOfWork.Save();
-            logger.Information(LogInformation.Step5, intervalId, messageResponse.Identity, messageResponse.BodyJson);
+                var messageResponse = new Message();
 
 
-            rabbitMQ.SendMessage(commonConfig.RuleResponseQueueName, messageResponse.BodyBinary);
-            logger.Information(LogInformation.Step6, intervalId, messageResponse.Identity, messageResponse.BodyJson);
+                try
+                {
+                    messageRequest.Identity=JsonConvert.DeserializeObject<RuleServiceRequest>(Encoding.UTF8.GetString(message.Body.ToArray())).trackingCode;
+                }
+                catch (Exception ex)
+                {
+                    messageRequest.Identity = "";
+                    messageRequest.InsertedAt = DateTime.Now;
+                    queueManagementUnitOfWork.MessageRepository.Add(messageRequest);
+                    queueManagementUnitOfWork.Save();
 
-            rabbitMQ.BasicAcc(message.DeliveryTag);
-            logger.Information(LogInformation.Step7, intervalId, messageRequest.Identity, messageRequest.BodyJson);
+                    messageResponse.Identity = "";
+                    messageResponse.ProducerId = this.saramadProducerId;
+                    messageResponse.QueueId = this.ruleResponseQueueId;
+                    messageResponse.RelatedMessage = messageRequest;
+                    messageResponse.ProducerId = this.saramadProducerId;
+                    messageResponse.QueueId = this.ruleResponseQueueId;
+                    messageResponse.InsertedAt = DateTime.Now;
+                    RuleServiceResponse ruleServiceRes = new RuleServiceResponse
+                    {
+                        resNO = "-100",
+                        resDesc = "Error in Parsing Message to valid Model"
+                    };
+
+                    messageResponse.BodyBinary = Encoding.UTF8.GetBytes(Newtonsoft.Json.JsonConvert.SerializeObject(ruleServiceRes));
+                    messageResponse.BodyJson = Newtonsoft.Json.JsonConvert.SerializeObject(ruleServiceRes);
+                    queueManagementUnitOfWork.MessageRepository.Add(messageResponse);
+                    queueManagementUnitOfWork.Save();
+
+                    rabbitMQ.SendMessage(commonConfig.RuleResponseQueueName, messageResponse.BodyBinary);
+                    rabbitMQ.BasicAcc(message.DeliveryTag);
+                    logger.Error(ex,"");
+                    return;
+                }
+                
+
+                messageRequest.ProducerId = this.dadgostariProducerId;
+                messageRequest.QueueId = this.ruleQueueId;
+                queueManagementUnitOfWork.MessageRepository.Add(messageRequest);
+                queueManagementUnitOfWork.Save();
+                logger.Information(LogInformation.Step2, intervalId, messageRequest.Identity, messageRequest.BodyJson);
+
+                RuleServiceRequest ruleServiceRequest;
+                ruleServiceRequest = Newtonsoft.Json.JsonConvert.DeserializeObject<RuleServiceRequest>(Encoding.UTF8.GetString(message.Body.ToArray()));
+
+                logger.Information(LogInformation.Step3, intervalId, ruleServiceRequest.trackingCode, JsonConvert.SerializeObject(ruleServiceRequest));
+                var ruleServiceResponse = saramadSL.SendRule(ruleServiceRequest);
+                ruleServiceResponse.trackingCode = ruleServiceRequest.trackingCode;
+                 logger.Information(LogInformation.Step4, intervalId, ruleServiceResponse.trackingCode, JsonConvert.SerializeObject(ruleServiceResponse));
+
+                messageResponse = mapper.Map(ruleServiceResponse);
+                messageResponse.ProducerId = this.saramadProducerId;
+                messageResponse.QueueId = this.ruleResponseQueueId;
+                messageResponse.RelatedMessageId = messageRequest.Id;
+                queueManagementUnitOfWork.MessageRepository.Add(messageResponse);
+                queueManagementUnitOfWork.Save();
+                logger.Information(LogInformation.Step5, intervalId, messageResponse.Identity, messageResponse.BodyJson);
+
+
+                rabbitMQ.SendMessage(commonConfig.RuleResponseQueueName, messageResponse.BodyBinary);
+                logger.Information(LogInformation.Step6, intervalId, messageResponse.Identity, messageResponse.BodyJson);
+
+                rabbitMQ.BasicAcc(message.DeliveryTag);
+                logger.Information(LogInformation.Step7, intervalId, messageRequest.Identity, messageRequest.BodyJson);
+            }
+            catch (Exception ex)
+            {
+                logger.Error(ex, "");
+            }
 
         }
         // ////////////////////////////////////////////////////////////////////////

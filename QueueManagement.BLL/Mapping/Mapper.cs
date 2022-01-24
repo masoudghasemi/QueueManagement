@@ -20,7 +20,6 @@ namespace QueueManagement.BLL.Mapping
                 BodyBinary = message.Body.ToArray(),
                 BodyJson = Encoding.UTF8.GetString(message.Body.ToArray()),
                 InsertedAt = DateTime.Now,
-                Identity = Map2(message).trackingCode,
             };
         }
 

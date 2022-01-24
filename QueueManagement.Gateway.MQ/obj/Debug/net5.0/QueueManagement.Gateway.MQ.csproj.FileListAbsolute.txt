@@ -26,7 +26,6 @@ D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Gateway.MQ\obj\Debug\net5.
 D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Gateway.MQ\obj\Debug\net5.0\QueueManagement.Gateway.MQ.AssemblyInfoInputs.cache
 D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Gateway.MQ\obj\Debug\net5.0\QueueManagement.Gateway.MQ.AssemblyInfo.cs
 D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Gateway.MQ\obj\Debug\net5.0\QueueManagement.Gateway.MQ.csproj.CoreCompileInputs.cache
-D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Gateway.MQ\obj\Debug\net5.0\QueueManagement.Gateway.MQ.csproj.CopyComplete
 D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Gateway.MQ\obj\Debug\net5.0\QueueManagement.Gateway.MQ.dll
 D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Gateway.MQ\obj\Debug\net5.0\ref\QueueManagement.Gateway.MQ.dll
 D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.Gateway.MQ\obj\Debug\net5.0\QueueManagement.Gateway.MQ.pdb

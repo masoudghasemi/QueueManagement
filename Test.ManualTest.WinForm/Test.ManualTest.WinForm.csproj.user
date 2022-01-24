@@ -4,7 +4,7 @@
     <_LastSelectedProfileId>E:\M_Ghasemi\Projects\QueueManagement\Test.ManualTest.WinForm\Properties\PublishProfiles\FolderProfile.pubxml</_LastSelectedProfileId>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Update="MainTest.cs">
+    <Compile Update="FormTest.cs">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>

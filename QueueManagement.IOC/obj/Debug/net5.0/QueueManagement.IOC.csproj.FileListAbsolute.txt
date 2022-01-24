@@ -46,7 +46,6 @@ D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.IOC\obj\Debug\net5.0\Queue
 D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.IOC\obj\Debug\net5.0\QueueManagement.IOC.AssemblyInfoInputs.cache
 D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.IOC\obj\Debug\net5.0\QueueManagement.IOC.AssemblyInfo.cs
 D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.IOC\obj\Debug\net5.0\QueueManagement.IOC.csproj.CoreCompileInputs.cache
-D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.IOC\obj\Debug\net5.0\QueueManagement.IOC.csproj.CopyComplete
 D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.IOC\obj\Debug\net5.0\QueueManagement.IOC.dll
 D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.IOC\obj\Debug\net5.0\ref\QueueManagement.IOC.dll
 D:\M_Ghasemi\Projects\QueueManagement\QueueManagement.IOC\obj\Debug\net5.0\QueueManagement.IOC.pdb
