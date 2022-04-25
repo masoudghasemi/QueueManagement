@@ -118,10 +118,16 @@ namespace QueueManagement.BLL.BusinessLogic.Concrete
                 RuleServiceRequest ruleServiceRequest;
                 ruleServiceRequest = Newtonsoft.Json.JsonConvert.DeserializeObject<RuleServiceRequest>(Encoding.UTF8.GetString(message.Body.ToArray()));
 
+
+               
+                var trackingCode = ruleServiceRequest.trackingCode;
+                ruleServiceRequest.trackingCode = string.Empty;
+
                 logger.Information(LogInformation.Step3, intervalId, ruleServiceRequest.trackingCode, JsonConvert.SerializeObject(ruleServiceRequest));
                 var ruleServiceResponse = saramadSL.SendRule(ruleServiceRequest);
-                ruleServiceResponse.trackingCode = ruleServiceRequest.trackingCode;
-                 logger.Information(LogInformation.Step4, intervalId, ruleServiceResponse.trackingCode, JsonConvert.SerializeObject(ruleServiceResponse));
+                logger.Information(LogInformation.Step4, intervalId, ruleServiceResponse.trackingCode, JsonConvert.SerializeObject(ruleServiceResponse));
+
+                ruleServiceResponse.trackingCode = trackingCode;//ruleServiceRequest.trackingCode;
 
                 messageResponse = mapper.Map(ruleServiceResponse);
                 messageResponse.ProducerId = this.saramadProducerId;

@@ -59,4 +59,3 @@ D:\M_Ghasemi\Projects\QueueManagement\Test.ManualTest\obj\Debug\net5.0\Test.Manu
 D:\M_Ghasemi\Projects\QueueManagement\Test.ManualTest\obj\Debug\net5.0\ref\Test.ManualTest.dll
 D:\M_Ghasemi\Projects\QueueManagement\Test.ManualTest\obj\Debug\net5.0\Test.ManualTest.pdb
 D:\M_Ghasemi\Projects\QueueManagement\Test.ManualTest\obj\Debug\net5.0\Test.ManualTest.genruntimeconfig.cache
-D:\M_Ghasemi\Projects\QueueManagement\Test.ManualTest\obj\Debug\net5.0\Test.ManualTest.csproj.CopyComplete

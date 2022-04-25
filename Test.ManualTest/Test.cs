@@ -40,6 +40,8 @@ namespace Test.ManualTest
         {
             var rule = GetRuleServiceRequest();
             var outputMode = Newtonsoft.Json.JsonConvert.SerializeObject(rule);
+            var des = JsonConvert.DeserializeObject<RuleServiceRequest>(outputMode);
+
             //var outputModel111 = Newtonsoft.Json.JsonConvert.DeserializeObject<object>(outputMode);
             var rabbitMq = serviceProvider.GetService<IRabbitMQ>();
             rabbitMq.SendMessage("Rule", Encoding.UTF8.GetBytes(outputMode));
